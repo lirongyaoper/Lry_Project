@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>表格-基本使用</title>
+</head>
+<body>
+	<table border="1">
+		<caption><strong>学生成绩</strong></caption>
+		<thead>
+			<tr>
+				<th>姓名</th>
+				<th>成绩</th>
+				<th>评语</th>
+			</tr>			
+		</thead>
+		<tbody>
+			<tr>
+				<td>小哥哥</td>
+				<td rowspan="2">99</td>
+				<td>小哥哥真帅气</td>
+			</tr>
+			<tr>
+				<td>小姐姐</td>
+				<!-- <td>100</td>				 -->
+				<td>小姐姐真漂亮</td>
+			</tr>			
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>总结</td>
+				<td colspan="2">考的不错</td>
+				<!-- <td>可以相亲</td> -->
+			</tr>			
+		</tfoot>
+	</table>
+</body>
+</html>
