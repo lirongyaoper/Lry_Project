@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>基础选择器</title>
 	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
 		p{
 			/*标签选择器就是以标签命名的选择器*/
 			color: red;
@@ -16,6 +20,9 @@
 		.fsize{
 			font-size: 66px;
 		}
+		#bluec{
+			color: skyblue;
+		}
 	</style>
 </head>
 <body>
@@ -23,5 +30,9 @@
 	<p>22222222222222222222222222222222</p>
 	<div class="div1">这是一个漂亮的div</div>
 	<p class="div1 fsize">swddddddddddddddddd</p>
+	<div id="bluec">这是一个div标签，该标签存在id</div>
+
+	<!-- 注意：一个页面不允许存在两个相同的id 值 -->
+	<!-- <p id="bluec"> 这是一个p标签，加id</p> -->
 </body>
 </html>
