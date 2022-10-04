@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>003优先级-!important的优先级及注意事项.</title>
+	<style type="text/css">
+		body{
+			继承来的样式优先级最低，加!important 也不起作用
+			color: red;
+		}
+
+		div{
+			color: green !important;
+		}
+		#div1{
+			color: blue ;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="div1" class="div01" style="color:yellow;">这是一个div标签</div>
+</body>
+</html>
