@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001CSS布局 -盒子模型复习.lry</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .login{
+            width: 356px;
+            height: 400px;
+            /* background: pink; */
+            margin: 50px auto;
+            padding-top: 10px;
+        }
+        .center {
+            text-align: center;
+
+        }
+        .login h1 a { 
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #ff4c00;
+        }
+        .login h2 {
+            margin-top: 35px;
+            font: normal 400 26px 宋体;
+            margin-bottom: 48px;
+            line-height: 1;
+        }
+        .login input {
+            /* input、textarea、button、select……  均为行内块元素，具有一下特点：
+                1.一行可以显示多个
+                2.可以设置宽高
+                特殊情况：img标签有行内块元素特点，但是Chrome调试工具中显示结果是inline */
+            width: 356px;
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            padding-left: 15px;
+        }
+        .login button {
+            width: 356px;
+            height: 50px;
+            background-color: #ff4c00;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1 class="center">
+            <a href="#"><img src="./images/mi-logo.png" alt="小米logo"></a>
+        </h1>
+        <h2 class="center">小米账号登录</h2>
+        <form action="">
+            <input type="text" placeholder="请输入账户邮箱">
+            <input type="password" placeholder="请输入账户密码">
+            <button>登录</button>
+        </form>
+    </div>
+</body>
+</html>

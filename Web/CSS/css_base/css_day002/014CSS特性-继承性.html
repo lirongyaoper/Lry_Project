@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>014CSS特性-继承性.lry</title>
+	<style type="text/css">
+		div {
+			color: red;
+			font-size: 30px;
+			height: 300px;
+			/* 特性：子元素有默认继承父元素样式的特点（子承父业）
+			可以继承的常见属性(文字控制属性都可以继承)
+			eg:1. color；2. font-style、font-weight、font-size、font-family；3. text-indent、text-align；4. line-height；5. …… */
+			/* 常见应用场景：
+				1. 可以直接给ul设置 list-style:none 属性，从而去除列表默认的小圆点样式
+				2. 直接给body标签设置统一的font-size，从而统一不同浏览器默认文字大小 */
+
+			/* 继承失效的情况（如果元素有浏览器默认样式，此时继承性依然存在，但是优先显示浏览器的默认样式）：
+				1. a标签的color会继承失效
+					• 其实color属性继承下来了，但是被浏览器默认设置的样式给覆盖掉了
+				2. h系列标签的font-size会继承失效
+					• 其实font-size属性继承下来了，但是被浏览器默认设置的样式给覆盖掉了				 */
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		这是div标签里面的文字
+		<span>这是div里面的span</span>
+	</div>
+</body>
+</html>
