@@ -51,3 +51,92 @@ h1{
     float: left;
     margin-right: 26px;
 }
+
+.nav li a {
+    display: block;
+    padding: 0 9px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav li a:hover {
+    border-bottom:2px solid #00a4ff;
+}
+
+.search{
+    float: left;
+    margin-left: 59px;
+    width: 412px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+}
+
+.search input{
+    float: left;
+    padding-left: 20px;
+    /* 左右加一起的尺寸要小于等于410 */
+    width: 360px;
+    height: 38px;
+    border: 0;
+}
+
+.search input::placeholder{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 40px;
+    background-image: url("../images/btn.png");
+    border: 0;
+}
+
+.user {
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    line-height: 42px;
+}
+.user img {
+    /* 调节图片垂直对齐方式, middle:居中 */
+    vertical-align: middle;
+}
+
+.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .wrapper{
+    height: 420px;
+    background-image: url('../images/banner2.png');
+}
+
+.banner .left {
+    float: left;
+    padding: 0 20px;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0,0,0,0.3);
+    /* 行高属于控制文字的属性, 能继承 */
+    line-height: 44px;
+}
+.banner .left span {
+
+    float: right;
+}
+.banner .left a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.banner .left a:hover {
+    color: #00b4ff;
+}
+
+
+
+
