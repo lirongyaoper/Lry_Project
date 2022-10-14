@@ -12,16 +12,22 @@ a{
     text-decoration: none;
 }
 
-.clearfix::before,.clearfix::after{
+.clearfix:before,.clearfix:after{
     content: "";
     display: table;
 }
-.clearfix::after{
+.clearfix:after{
     clear: both;
 }
 
 body{
     background-color: #f3f5f7;
+}
+
+/* 版心 */
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
 }
 
 /* 头部 */
@@ -30,11 +36,7 @@ body{
     margin: 30px auto;
 }
 
-/* 版心 */
-.wrapper{
-    width: 1200px;
-    margin: 0 auto;
-}
+
 
 h1{
     float: left;
@@ -91,7 +93,7 @@ h1{
     float: left;
     width: 50px;
     height: 40px;
-    background-image: url("../images/btn.png");
+    background-image: url(../images/btn.png);
     border: 0;
 }
 
@@ -138,5 +140,89 @@ h1{
 }
 
 
+.banner .right{
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+}
+.banner .right h2{
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+.banner .right .content{
+    padding: 0 18px;
+
+}
+.banner .right .content dl{
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
 
 
+
+.banner .right .content dt {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.banner .right .content dd {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.banner .right .more {
+    display: block;
+    margin: 4px auto 0;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    font-weight: ;
+    color: #00a4ff;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 精品推荐 */
+.goods {
+    margin-top: 8px;
+    padding-left: 34px;
+    padding-right: 26px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0px 2px 3px 0px rgba(
+        118, 118, 118, 0.2);
+    line-height: 60px;
+}
+.goods h2 {
+    float: left;
+    font-size: 16px;
+    color: #00a4ff;
+    font-weight: 400;
+}
+.goods ul {
+    float: left;
+    margin-left: 30px;
+
+}
+.goods ul li{
+    float: left;
+}
+
+.goods li a {
+    border-left: 1px solid #bfbfbf;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #050505;
+}
+.goods .xingqu {
+    float: right;
+    font-size: 14px;
+    color: #00a4ff;
+}
