@@ -1,55 +1,57 @@
-*{
+/* index.css是用来美化首页的 */
+* {
     margin: 0;
     padding: 0;
+    /* 內减模式 */
     box-sizing: border-box;
 }
 
-li{
+li {
     list-style: none;
 }
-
-a{
+a {
     text-decoration: none;
 }
 
-.clearfix:before,.clearfix:after{
-    content: "";
-    display: table;
-}
-.clearfix:after{
-    clear: both;
-}
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table; 
+  }
+  .clearfix:after {
+    clear:both;
+  }
 
-body{
+
+body {
     background-color: #f3f5f7;
 }
 
 /* 版心 */
-.wrapper{
+.wrapper {
     width: 1200px;
     margin: 0 auto;
 }
 
 /* 头部 */
-.header{
+.header {
     height: 42px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
     margin: 30px auto;
 }
 
-
-
-h1{
+h1 {
     float: left;
 }
 
 /* 导航 */
-.nav{
+.nav {
     float: left;
     margin-left: 70px;
     height: 42px;
 }
 
-.nav li{
+.nav li {
     float: left;
     margin-right: 26px;
 }
@@ -59,15 +61,18 @@ h1{
     padding: 0 9px;
     height: 42px;
     line-height: 42px;
+    /* border-bottom: 2px solid #00a4ff; */
+
     font-size: 18px;
     color: #050505;
 }
 
 .nav li a:hover {
-    border-bottom:2px solid #00a4ff;
+    border-bottom: 2px solid #00a4ff;
 }
 
-.search{
+/* 搜索 */
+.search {
     float: left;
     margin-left: 59px;
     width: 412px;
@@ -75,7 +80,7 @@ h1{
     border: 1px solid #00a4ff;
 }
 
-.search input{
+.search input {
     float: left;
     padding-left: 20px;
     /* 左右加一起的尺寸要小于等于410 */
@@ -84,7 +89,8 @@ h1{
     border: 0;
 }
 
-.search input::placeholder{
+/* 控制placeholder的样式 */
+.search input::placeholder {
     font-size: 14px;
     color: #bfbfbf;
 }
@@ -93,7 +99,7 @@ h1{
     float: left;
     width: 50px;
     height: 40px;
-    background-image: url('../images/btn.png');
+    background-image: url(../images/btn.png);
     border: 0;
 }
 
@@ -108,28 +114,34 @@ h1{
     vertical-align: middle;
 }
 
-.banner{
+/* 轮播图 */
+.banner {
     height: 420px;
     background-color: #1c036c;
 }
-.banner .wrapper{
+
+.banner .wrapper {
     height: 420px;
-    background-image: url('../images/banner2.png');
+    background-image: url(../images/banner2.png);
 }
 
 .banner .left {
     float: left;
+
     padding: 0 20px;
+
     width: 190px;
     height: 420px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0, 0.3);
+
     /* 行高属于控制文字的属性, 能继承 */
     line-height: 44px;
 }
-.banner .left span {
 
+.banner .left span {
     float: right;
 }
+
 .banner .left a {
     font-size: 14px;
     color: #fff;
@@ -139,15 +151,15 @@ h1{
     color: #00b4ff;
 }
 
-
-.banner .right{
+.banner .right {
     float: right;
     margin-top: 50px;
     width: 228px;
     height: 300px;
     background-color: #fff;
 }
-.banner .right h2{
+
+.banner .right h2 {
     height: 48px;
     background-color: #9bceea;
     text-align: center;
@@ -155,16 +167,15 @@ h1{
     font-size: 18px;
     color: #fff;
 }
-.banner .right .content{
+
+.banner .right .content {
     padding: 0 18px;
-
 }
-.banner .right .content dl{
+
+.banner .right .content dl {
     padding: 12px 0;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom:2px solid #e5e5e5;
 }
-
-
 
 .banner .right .content dt {
     font-size: 16px;
@@ -178,13 +189,16 @@ h1{
 
 .banner .right .more {
     display: block;
+    /* margin: 4px 14px 0; */
     margin: 4px auto 0;
     width: 200px;
     height: 40px;
     border: 1px solid #00a4ff;
+
     font-size: 16px;
-    font-weight: 700;
     color: #00a4ff;
+    font-weight: 700;
+
     text-align: center;
     line-height: 40px;
 }
@@ -194,24 +208,29 @@ h1{
     margin-top: 8px;
     padding-left: 34px;
     padding-right: 26px;
+
     height: 60px;
     background-color: #fff;
-    box-shadow: 0px 2px 3px 0px rgba(
-        118, 118, 118, 0.2);
+    box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+
     line-height: 60px;
+
 }
+
 .goods h2 {
     float: left;
     font-size: 16px;
     color: #00a4ff;
     font-weight: 400;
 }
+
 .goods ul {
     float: left;
     margin-left: 30px;
-
 }
-.goods ul li{
+
+.goods ul li {
     float: left;
 }
 
@@ -221,19 +240,23 @@ h1{
     font-size: 16px;
     color: #050505;
 }
+
 .goods .xingqu {
     float: right;
     font-size: 14px;
     color: #00a4ff;
 }
 
+/* 精品课程 */
 .box {
     margin-top: 35px;
 }
+
 .box .title {
     height: 40px;
 }
-.box .title h2{
+
+.box .title h2 {
     float: left;
     font-size: 20px;
     color: #494949;
@@ -246,7 +269,8 @@ h1{
     font-size: 12px;
     color: #a5a5a5;
 }
-.box .content li{
+
+.box .content li {
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
@@ -271,14 +295,17 @@ h1{
     font-size: 12px;
     color: #999;
 }
+
 .box .content li span {
     color: #ff7c2d;
 }
 
-
+/* 版权 */
 .footer {
     margin-top: 40px;
+
     padding-top: 30px;
+
     height: 417px;
     background-color: #fff;
 }
@@ -287,11 +314,12 @@ h1{
     float: left;
 }
 
-.footer .left p {
+.footer .left  p {
     margin: 20px 0 10px;
     font-size: 12px;
     color: #666;
 }
+
 .footer .left a {
     display: inline-block;
     width: 120px;
@@ -302,10 +330,24 @@ h1{
     font-size: 16px;
     color: #00a4ff;
 }
+
 .footer .right {
     float: right;
 }
-.footer .right dl{
+
+.footer .right dl {
     float: left;
     margin-left: 120px;
+}
+
+
+/* 课程模块 hot 定位小图 */
+.box .content li {
+    position: relative;
+}
+
+.box .content li .hot {
+    position: absolute;
+    right: -4px;
+    top: 4px;
 }
