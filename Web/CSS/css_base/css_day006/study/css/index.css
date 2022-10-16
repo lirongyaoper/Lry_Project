@@ -271,6 +271,8 @@ h1 {
 }
 
 .box .content li {
+    /* 父亲相对定位 */
+    position: relative;
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
@@ -298,6 +300,12 @@ h1 {
 
 .box .content li span {
     color: #ff7c2d;
+}
+/* 课程模块 hot 定位小图 */
+.box .content li .hot {
+    position: absolute;
+    right: -4px;
+    top: 4px;
 }
 
 /* 版权 */
@@ -341,13 +349,5 @@ h1 {
 }
 
 
-/* 课程模块 hot 定位小图 */
-.box .content li {
-    position: relative;
-}
 
-.box .content li .hot {
-    position: absolute;
-    right: -4px;
-    top: 4px;
-}
+
