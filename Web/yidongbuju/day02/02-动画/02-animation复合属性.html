@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>animation复合属性</title>
+    <title>animation复合属性-lry</title>
     <style>
         .box {
             width: 200px;
             height: 100px;
             background-color: pink;
+            /* animation: change 1s linear; */
+            /* animation: 动画名称 动画时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕时状态（最终状态）; */
+            /* animation: change 1s steps(3) 1s 3; */
+            animation: change 1s  infinite alternate;/* 无限循环 */
+            animation: change 1s backwards;/* 默认值, 动画停留在最初的状态 */
+            animation: change 1s forwards;/* 动画停留在结束状态 */
             
         }
 

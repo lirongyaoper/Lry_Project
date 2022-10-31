@@ -5,12 +5,33 @@
   <title>精灵动画</title>
   <style>
     .box {
-      /* 1680/12 */
+      /* 1680/12 : 保证显示区域的尺寸和一个精灵小图的尺寸相同 */
       width: 140px;
       height: 140px;
-      /* border: 1px solid #000; */
+      border: 1px solid #000;
       background-image: url(./images/bg.png);
+      animation: move 1s steps(12) infinite,
+      
+                run 1s forwards;
 
+    }
+
+    @keyframes move {
+      /* from{
+        background-position: 0 0;
+      }*/
+      to{ 
+        background-position: -1680px 0;
+      }
+    }
+
+    @keyframes run {
+      /* from {
+        transform: translateX(0);
+      }*/
+      to { 
+        transform: translateX(800px);
+      }
     }
 
 
