@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位补充01-lry.html</title>
+    <style>
+        .father {
+            position: relative;
+            float: left;
+            margin-left: 20px;
+            width: 160px;
+            height: 20px;
+            background-color: lightskyblue;
+        }
+
+        .son {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            bottom: -20px;
+            width: 20px;
+            height: 20px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <span class="son"></span>
+    </div>
+    <div class="father">
+        <span class="son"></span>
+    </div>
+    <div class="father">
+        <span class="son"></span>
+    </div>    
+</body>
+</html>
