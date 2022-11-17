@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web\yidongbuju\day01\02-平面转换\03-双开门-div实现_lry.html</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 1366px;
+            height: 600px;
+            margin: 100px auto;
+            background-image: url(./images/bg.jpg);
+            overflow: hidden;
+        }
+
+        .left,
+        .right {
+            float: left;
+            width: 50%;
+            height: 600px;
+            /* background-color: red; */
+            background-image: url(./images/fm_lry.jpg);
+            transition: all .5s;
+        }
+        .right {
+            background-position: -100% 0;
+        }
+
+
+        .box:hover .left{
+            transform: translate(-100%);
+        }
+        .box:hover .right{
+            transform: translate(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
