@@ -3,9 +3,11 @@
 }
 .father .son {
   color: pink;
+  font-size: 46px;
 }
 .father .son:hover {
   color: green;
+  font-style: italic;
 }
 .father:hover {
   color: orange;
