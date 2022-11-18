@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01体验flex布局.html</title>
+    <title>03flex伸缩比.html</title>
     <style>
         *{
             margin: 0;
             padding: 0;
-
         }
-        .box{
+        .box {
             display: flex;
-            height: 200px;
+            height: 300px;
             border: 1px solid #000;
         }
+
         .box div {
-            /* float: left;
-            margin: 10px; */
-            width: 100px;
-            height: 100px;
+            height: 200px;
+            margin: 0 20px;
             background-color: pink;
+        }
+        .box div:nth-child(1) {
+            width: 50px;
+        }
+        .box div:nth-child(2){
+            flex: 3;
+        }
+        /* 占用父级剩余尺寸的份数 */
+        .box div:nth-child(3){
+            flex: 1;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div>1111</div>
+        <div>2222</div>
+        <div>3333</div>
     </div>
 </body>
 </html>
