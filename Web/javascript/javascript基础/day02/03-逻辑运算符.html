@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-逻辑运算符.html</title>
+</head>
+<body>
+    <script>
+        //1.逻辑与
+        console.log(false && 20)//false
+        console.log(5<3 && 20)//false
+        console.log(undefined && 20)//undefined
+        console.log(null && 20)//null
+        console.log(0 && 20)//0
+        console.log(10 && 20)//20
+
+        //2. 逻辑或
+        console.log(false || 20)//20
+        console.log(5<3 || 20)//20
+        console.log(undefined || 20)//20
+        console.log(null || 20)//20
+        console.log(0 || 20)//20
+        console.log(10 || 20)//10
+
+        function abc (x, y){
+            x = x || 0
+            y = y || 0
+            return x + y
+        }
+
+        console.log(abc(2))
+    </script>
+</body>
+</html>

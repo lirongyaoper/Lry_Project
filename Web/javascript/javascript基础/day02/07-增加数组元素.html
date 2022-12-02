@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-增加数组元素</title>
+</head>
+<body>
+    <script>
+        //可以向数组末尾添加一个或者多个数组元素，返回的是数组长度
+        let arr =['red', 'green']
+        console.log(arr.push('blue','pink')) 
+        for(i=0;i<arr.length;i++){
+            console.log(arr[i])
+        }
+        //2.//可以向数组开头添加一个或者多个数组元素，返回的是数组长度
+        let arr1 = ['red', 'green']
+        console.log(arr1.unshift('pink', 'blue'))
+        console.log(arr1)
+
+
+    </script>
+</body>
+</html>
