@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-对象的遍历</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            uname : 'lirongyaoper',
+            age : 18,
+            sex : 'man',
+            aihao : 'project',
+            say : function(){
+                console.log('我爱中国')
+            }
+        }
+
+        // 语法: for (let k in 对象名){}
+        for (let k in obj){
+            console.log(k)
+            // console.log(obj['k'])   错误写法  此方法中表示的是：找obj对象中属性 k 的值。但是该对象中没有此属性值。
+            console.log(obj[k])
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-随机函数封装</title>
+</head>
+<body>
+    <script>
+        function getRandom(min, max){
+            return Math.floor(Math.random()*(max - min +1)) + min
+        }
+        let random= getRandom(1,10)
+        console.log(random)
+        console.log(random)
+        let random1 = getRandom(1,50)
+        console.log(random1)
+
+        let stuarr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+        let random2= getRandom(0, stuarr.length- 1)
+        document.write(stuarr[random2])
+        stuarr.splice(random2,1)
+        console.log(stuarr)
+    </script>
+</body>
+</html>

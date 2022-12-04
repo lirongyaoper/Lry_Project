@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-对象的声明及使用</title>
+</head>
+<body>
+    <script>
+        let goods ={
+            name:'小米10青春版',
+            num : 10000000000,
+            weight: '0.05kg',
+            address: '中国大陆'
+        }
+
+        console.log(goods);
+
+        
+        let person ={
+            uname : 'lirongyaoper',
+            age : 23,
+            sex : '男',
+            sayHi : function(){
+                console.log('hi hi ')
+            },
+            mtv : function (s){
+                console.log(s)
+            },
+            sing : function(song){
+                console.log(`他在唱一首名叫${song}的美妙歌曲。`)
+            }
+        }
+        console.log(person.uname)
+        console.log(person.age)
+        console.log(person['sex'])
+        person.sayHi()
+        person.mtv('无间道')
+        person.sing('dajia ')
+    </script>
+</body>
+</html>

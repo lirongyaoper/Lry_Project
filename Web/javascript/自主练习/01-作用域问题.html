@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-作用域问题</title>
+</head>
+<body>
+    <script>
+        for (let i=0; i <3; i++){
+            document.write(i)
+        }
+        //  console.log(i)  i is not defined
+
+        function fun1(){
+            let num1 = 20
+        }
+        fun1()
+        // console.log(num1)  num1 is not defined
+
+
+
+        function fun2(){
+            num2 =20  //如果函数内部或者块级作用域内部，变量没有声明，直接赋值，也当全局变量看，但是强烈不推荐
+        }
+
+        fun2()
+        console.log(num2)  //20
+
+
+        // 函数内部的形参可以当做局部变量看
+        function fn(x, y) {
+            // x 和 y 可以看做是 局部变量
+            document.write(x + y)
+        }
+        fn(1, 2)
+        //console.log(x) 错误了
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-立即执行函数</title>
+</head>
+<body>
+    <script>
+
+
+        //立即执行函数的应用：1.创建一个独立的作用域，防止变量污染
+        //第一种写法
+        (function(x, y){
+            console.log(x +y)
+        })(4,5);
+
+        // 第二种写法
+        (function(a, b){
+            console.log(a * b)
+        }(10,10))
+
+        // 此种情况输出5个5
+        for(var i = 0; i< 5; i++){
+            window.setTimeout(function(){
+                console.log(i);
+            },1000);
+        }
+
+
+        // 利用立刻执行函数可输出： 0，1，2，3，4，
+        for(var i = 0; i<5; i++){
+            (function(x){
+                window.setTimeout(function(){
+                    console.log(x)
+                },1000);
+            })(i);
+        }
+
+        for(var i = 0;i < 5; i++ ){
+            (function(y){
+                window.setTimeout(function(){
+                    console.log(y)
+                },1000*(1+y));
+            })(i);
+        }
+
+    </script>
+</body>
+</html>
