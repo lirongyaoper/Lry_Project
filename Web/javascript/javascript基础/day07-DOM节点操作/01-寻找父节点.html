@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-寻找父节点</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 150px;
+            background-color: red;
+
+        }
+        .son {
+            width: 75px;
+            height: 50px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <button>点击</button>
+    <div class="father">
+        <div class="son">儿子</div>
+    </div>
+    <script>
+        let btn =document.querySelector('button')
+        let son = document.querySelector('.son')
+
+        btn.addEventListener('click', function(){
+            // son.parentElement.style.backgroundColor='yellow'
+            son.parentNode.style.display='none'
+        })
+
+        console.log(son.parentElement===son.parentNode)//两种写法一致
+        console.dir(son.parentElement)
+        console.dir(son.parentNode)
+        console.log('-----------------------------------')
+        console.log(son.parentElement)
+        console.log(son.parentNode)        
+
+    </script>
+</body>
+</html>

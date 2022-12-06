@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-查找子节点</title>
+</head>
+<body>
+    <button>点击</button>
+    <ul>
+        <li>我是孩纸</li>
+        <li>我是孩纸</li>
+        <li>我是孩纸</li>
+        <li>我是孩纸</li>
+        <li>我是孩纸</li>
+        <li>我是孩纸</li>
+    </ul>
+    <script>
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        // console.log(ul.children === ul.childNodes)//两者不一样
+        // console.log(ul.childNodes)
+        // console.log(ul.children)
+        // console.log('-----------------------------')
+        // console.dir(ul.childNodes)
+        // console.dir(ul.children)
+        btn.addEventListener('click', function () {
+
+            for (let i = 0; i < ul.children.length; i++) {
+                ul.children[i].style.color = 'red'
+            }
+        })
+        ul.children[0].style.color = 'green'
+        // console.log(ul.childNodes)
+    </script>   
+</body>
+</html>
