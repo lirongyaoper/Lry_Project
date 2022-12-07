@@ -33,6 +33,7 @@
         </div>
     </div>
     <script>
+        
         let data = [
             {
                 src: 'images/course01.png',
@@ -81,26 +82,27 @@
             }
         ]
         let ul = document.querySelector('ul')
-        // 1. 根据数据的个数，决定这小li的个数
-        for (let i = 0; i < data.length; i++) {
-            // 2. 创建小li
-            let li = document.createElement('li')
-            // console.log(li)
+        for (i=0; i< data.length;i ++){
 
-            // 4. 先准备好内容，再追加 
-            li.innerHTML = `
-            <img src=${data[i].src} alt="">
-            <h4>
-                ${data[i].title}
-            </h4>
-            <div class="info">
-                <span>高级</span> • <span> ${data[i].num}</span>人在学习
-            </div>
+            //创建小li
+            let li = document.createElement('li')
+            li.innerHTML=`
+                <img src="${data[i].src}" alt="">
+                <h4>
+                    ${data[i].title}
+                </h4>
+                <div class="info">
+                    <span>高级</span> • <span> ${data[i].num}</span>人在学习
+                </div>            
+            
             `
-            // 3. 追加给ul   父元素.appendChild(子元素)
+            
+
             ul.appendChild(li)
 
         }
+
+        
     </script>
 </body>
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-跟随鼠标的天使.html</title>
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="./images/tianshi.gif" alt="天使的翅膀">
+    <script>
+        let img = document.querySelector('img')
+        document.addEventListener('mousemove',function(e){
+            img.style.top = e.pageY  -50 + 'px'
+            img.style.left = e.pageX - 40 + 'px'
+        })
+    </script>
+</body>
+</html>
