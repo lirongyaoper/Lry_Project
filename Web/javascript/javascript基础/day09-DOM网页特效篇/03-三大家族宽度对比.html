@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-三大家族宽度对比.html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            overflow: auto;
+            padding: 20px;
+            border: 10px solid red;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+        我有很多很多的内容哦很多的内容哦
+    </div>
+
+    <script>
+        //scrollWidth  scrollHeight  获取内容宽高
+        let div = document.querySelector('div')
+        console.log(div.scrollWidth)//纯数字
+        console.log(div.scrollHeight)//纯数字
+
+        // scrollLeft和scrollTop 获取元素内容往左、往上滚出去看不到的距离 ,这两个属性是可以修改的   
+        // div.addEventListener('scroll',function (){
+        //     console.log(this.scrollTop)
+        // })
+        console.log('---------------------------------------')
+                // offset 盒子元素的大小 = 盒子本身的宽度和高度 + padding + border
+        console.log(div.offsetWidth)  // 150 不带单位
+        console.log(div.offsetHeight)  // 150 不带单位
+        console.log(div.offsetTop)  //
+        console.log(div.offsetLeft)
+        //  client 当前可视区域  不包含滚动条  边框等等
+        console.log('----------------------------')
+        console.log(div.clientWidth)
+        console.log(div.clientHeight)
+        console.log(div.clientTop)  // 边框的宽度  了解  呵呵
+        console.log(div.clientLeft)
+
+
+    </script>
+</body>
+</html>
