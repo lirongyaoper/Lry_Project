@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-5秒中后页面跳转.html</title>
+    <style>
+        a span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://lirongyaoper.com"><span>5</span> 秒之后跳转<b>荣耀科技</b></a>
+    <script>
+        let a = document.querySelector('a')
+        let num = 5
+        let timer= setInterval(function (){
+            num --
+            a.innerHTML= `<span>${num}</span> 秒之后跳转<b>荣耀科技</b>`
+            if(num ===0){
+                clearInterval(timer)
+                window.location.href='https://lirongyaoper.com'
+            }
+        },1000)
+    </script>
+</body>
+</html>
