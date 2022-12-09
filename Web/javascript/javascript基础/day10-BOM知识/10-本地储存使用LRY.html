@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-本地储存使用LRY</title>
+</head>
+<body>
+
+    <script>
+        // 存储数据 localStorage.setItem('键', '值')
+        // localStorage.setItem('uname', 'pink老师')
+        // localStorage.setItem('age', 18)
+        // 获取数据
+        // localStorage.getItem('键')
+        // console.log(localStorage.getItem('uname'))
+        // 删除数据
+        // localStorage.removeItem('uname')
+        // 1. 存储复杂数据类型（引用数据类型）        
+        localStorage.setItem('xingmong','lirongyaoper')
+        document.write(localStorage.getItem('xingmong'))
+        // localStorage.removeItem('xingmong')  //删除储存数据
+
+        //----------------------------复杂数据类型---------------------------------
+        // console.log(JSON.stringify(obj))
+        //（1） 复杂数据类型一定要转换为json字符串在进行存储 （因为本地存储只能存储字符串）
+         // （2） 取数据  可以使用 JSON.parse()  将json字符串转换为对象
+        // console.log(typeof localStorage.getItem('obj'))       
+        let obj = {
+            uname : 'lirongyao',
+            age :18,
+            address: 'HeNan.zhoukou'
+        }
+        localStorage.setItem('obj',JSON.stringify(obj))
+
+        // localStorage.getItem('obj')
+        console.log(localStorage.getItem('obj'))
+        console.log(JSON.parse(localStorage.getItem('obj')))
+
+    </script>
+    
+</body>
+</html>

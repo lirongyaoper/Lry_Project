@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-元字符-字符类.html</title>
+</head>
+
+<body>
+    <script>
+        console.log(/abc/.test('abc')) //true
+        console.log(/abc/.test('ab'))  //false
+        // 字符类 []
+        console.log(/[abc]/.test('abc'))  //true
+        console.log(/[abc]/.test('')) //false
+        console.log(/[abc]/.test('andy')) //true
+        console.log(/[abc]/.test('baby'))  //true
+        console.log(/[abc]/.test('cry')) //true
+        console.log(/[abc]/.test('die'))//false
+
+        // 字符类 [-] 连字符
+        console.log(/^[abc]$/.test('abc'))//false
+        console.log(/^[abc]$/.test('a'))//true
+        console.log(/^[abc]$/.test('b'))//true
+        console.log(/^[abc]$/.test('c'))//true
+        console.log(/^[abc]$/.test('cc'))  //false
+
+        // // 26个英文字母选其中的一个
+        console.log(/^[a-zA-Z]$/.test('d'))//true
+        console.log(/^[a-zA-Z]$/.test('D'))//true
+        console.log(/^[a-zA-Z]$/.test('DD'))  //false
+        console.log(/^[a-zA-Z0-9]$/.test('6'))//true
+        console.log(/^[a-zA-Z0-9-_]$/.test('6'))//true
+
+        console.log(/^abc+$/.test('cc'))  //false   此“+”只针对最后一个 c 有效
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-元字符-量词.html</title>
+</head>
+
+<body>
+    <script>
+        // console.log(/a/.test('a'))     //true
+        // // * 量词 n >= 0 
+        // console.log(/a*/.test(''))     //true
+        // console.log(/a*/.test('a'))    //true
+        // console.log(/a*/.test('aa'))   //true
+        // console.log(/a*/.test('aaaaaaaa'))   //true   
+        // console.log(/a*/.test('b'))   //true
+        // console.log('--------------------------')
+        // // + 量词 n >= 1
+        // console.log(/a+/.test('')) //false
+        // console.log(/a+/.test('a'))  //true
+        // console.log(/a+/.test('aa'))  //true
+        // console.log(/a+/.test('aaaaaaaa'))
+        // console.log(/a+/.test('b'))
+        // console.log('--------------------------')
+        // // ? 出现 0 || 1 
+        // console.log(/^a?$/.test(''))   //true
+        // console.log(/^a?$/.test('a'))   //true
+        // console.log(/^a?$/.test('aa'))  //false
+
+        // {n}   只能出现 n次   符号之间不要加空格
+        console.log(/^a{3}$/.test('aa'))  //false
+        console.log(/^a{3}$/.test('aaa'))   //true
+        console.log(/^a{3}$/.test('aaaa'))   //false
+
+        // {n,}   >= n 
+        console.log(/^a{3,}$/.test('aa'))   //false
+        console.log(/^a{3,}$/.test('aaa'))    //true
+        console.log(/^a{3,}$/.test('aaaa'))   //true
+        console.log('--------------------------')
+        // {n,m}   >= n  <= m 
+        console.log(/^a{3,6}$/.test('aa'))  //false
+        console.log(/^a{3,6}$/.test('aaa'))   //true
+        console.log(/^a{3,6}$/.test('aaaa'))   //true
+        console.log(/^a{3,6}$/.test('aaaaa'))   //true
+        console.log(/^a{3,6}$/.test('aaaaaaaa'))  //false
+    </script>
+</body>
+
+</html>
