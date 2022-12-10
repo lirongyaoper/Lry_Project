@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19-继承2</title>
+</head>
+<body>
+	
+
+	
+
+
+	<script type="text/javascript">
+
+		// 构造函数
+		function Person () {
+			this.head = 1;
+			this.eyes = 2;
+			this.legs = 2;
+
+			this.say = function () {console.log('say');}
+			this.eat = function () {console.log('eat');}
+		}
+
+		// function Chinese () {
+		// 	this.language = '汉语';
+		// 	this.skin = 'yellow';
+		// }
+		// // 继承:
+		// // 1、把对象赋值给原型对象
+		// Chinese.prototype = new Person();
+		// // 2、指回构造函数本身
+		// Chinese.prototype.constructor = Chinese;
+
+		// console.log(Chinese.prototype);
+
+		// // 实例对象
+		// let c1 = new Chinese();
+		// console.log(c1);
+
+
+		// --------------------------------------------
+
+		function Japanese () {
+			this.language = '日语';
+			this.skin = 'yellow';
+		}
+			//继承
+		// 1、把对象赋值给原型对象
+		Japanese.prototype = new Person();
+		// 2、指回构造函数
+		Japanese.prototype.constructor = Japanese;
+
+		let j1 = new Japanese();
+		console.log(Japanese.prototype);
+		console.log(j1);
+
+	</script>
+
+
+
+</body>
+</html>

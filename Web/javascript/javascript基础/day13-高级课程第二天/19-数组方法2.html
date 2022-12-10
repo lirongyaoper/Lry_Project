@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19-数组方法2</title>
+</head>
+<body>
+	
+	
+
+	<script type="text/javascript">
+			
+		//indexOf：查找某个元素在数组中首次出现的索引位置，找不到就是返回-1
+		let arr = ['a', 'b', 'c', 'd', 'a', 'b', 'f'];
+		let re = arr.indexOf('m');
+		console.log(re); //-1
+		//lastIndexOf：查找某个元素在数组中尾次出现的索引位置，找不到就返回-1
+		let re1 = arr.lastIndexOf('b');
+		let index = arr.lastIndexOf('a')
+		console.log(re1);
+		console.log(index)
+
+
+		// sort：排序
+		let arr1 = [3, 16, 22, 66, 123, 99];
+
+		// 正序排列:
+		let re3 = arr1.sort(function (a, b) {return a - b;});
+		// 倒序排列
+		// let re = arr.sort(function (a, b) {return b - a;});
+
+		console.log( re3 );
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>
