@@ -23,7 +23,7 @@
     <h3>11-样式操纵</h3>
     <p>css可以获取及设置元素样式,设置的是行内样式</p>
     <!-- 测试用的盒子 -->
-    <div class="box"></div>
+    <div class="box">你好</div>
     <!-- 引入 jQuery -->
     <script src="./jquery/jquery-3.5.1.js"></script>
     <script>
@@ -37,8 +37,9 @@
       $('.box').css({
         backgroundColor: 'skyblue',
         border: '10px solid yellowgreen',
-        width: 100,
-        height: 100
+        width: '150px',
+        height: '100px',
+
       })
 
       // 3. 样式获取

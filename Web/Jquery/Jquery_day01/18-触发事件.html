@@ -16,7 +16,7 @@
   <body>
     <h4>18-触发事件</h4>
     <p>
-      jQuery 中如何通过代码的方式触发绑定的事件
+      jQuery 中通过  trigger('事件')  代码的方式触发绑定的事件
     </p>
     <!-- 测试用标签 -->
     <button class="btn">按钮</button>
@@ -36,8 +36,8 @@
       })
 
       // 2. trigger触发
-      $('.text').trigger('input')
-      $('.btn').trigger('click')
+      // $('.text').trigger('input')
+      // $('.btn').trigger('click')
 
       // 3. 注册自定义事件
       $('.text').on('itheima-input', function () {

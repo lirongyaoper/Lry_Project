@@ -41,12 +41,13 @@
         })
       $('.input-num button')
         .last()
-        .click(function () {
-          if (num < 10) {
-            num++
+        .click(function(){
+          let num = $('.input-num span').text()
+          if(num < 10){
+            num ++
             $('.input-num span').text(num)
-          } else {
-            alert('别点啦,到头啦')
+          }else{
+            alert('最高报价')
           }
         })
     </script>

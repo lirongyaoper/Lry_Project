@@ -42,15 +42,15 @@
     <!-- 导入jQuery -->
     <script src="./jquery/jquery-3.5.1.js"></script>
     <script>
-      // 1. 父元素 parent
-      // $('.course')
-      //   .parent()
-      //   .css('backgroundColor', 'pink')
+      //1. 父元素 parent
+      $('.course')
+        .parent()
+        .css('backgroundColor', 'pink')
 
       // 2. 子元素 children
-      $('.course')
-        .children()
-        .css('backgroundColor', 'skyblue')
+      // $('.course')
+      //   .children()
+      //   .css('backgroundColor', 'red')
       $('.campus')
         .children('.bj')
         .css('backgroundColor', 'pink')
@@ -61,16 +61,16 @@
         .css('color', 'red')
       $('.sz')
         .siblings('.gz')
-        .css('backgroundColor', 'yellowgreen')
+        .css('backgroundColor', 'yellow')
 
       // 4. 后代元素 find
       $('.container')
         .find('h4')
         .css('backgroundColor', 'yellowgreen')
 
-      $('.container')
-        .find('li')
-        .css('border', '10px solid orange')
+      // $('.container')
+      //   .find('li')
+      //   .css('border', '1px solid orange')
     </script>
   </body>
 </html>
