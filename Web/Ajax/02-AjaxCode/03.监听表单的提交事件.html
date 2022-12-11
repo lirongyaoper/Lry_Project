@@ -25,9 +25,9 @@
       // })
 
       // 第二种方式
-      $('#f1').on('submit', function () {  
-        alert('监听到了表单的提交事件2')
-      })
+        $('#f1').on('submit',function(e){
+          e.preventDefault()
+        })
     })
   </script>
 

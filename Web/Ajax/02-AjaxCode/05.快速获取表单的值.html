@@ -29,7 +29,8 @@
       // 第二种方式
       $('#f1').on('submit', function (e) {
         e.preventDefault()
-        var data = $('#f1').serialize()
+        var data = $(this).serialize()  //第一种写法
+        var data = $('#f1').serialize()  //第二中写法
         console.log(data)
       })
     })
