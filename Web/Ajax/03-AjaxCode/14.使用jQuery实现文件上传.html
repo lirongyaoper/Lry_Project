@@ -39,6 +39,10 @@
         fd.append('avatar', files[0])
 
         // 发起 jQuery 的 Ajax 请求，上传文件
+
+        //荣耀科技
+        //若上传文件，必须让ajax传入的对象里 processData: false,    contentType: false,
+
         $.ajax({
           method: 'POST',
           url: 'http://www.liulongbin.top:3006/api/upload/avatar',
