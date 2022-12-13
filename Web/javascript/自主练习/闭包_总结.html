@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>闭包</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<ul>
+		<li>li1</li>
+		<li>li2</li>
+		<li>li3</li>
+		<li>li4</li>
+		<li>li5</li>
+		<li>li6</li>
+		<li>li7</li>
+		<li>li8</li>
+		<li>li9</li>
+	</ul>
+	<script type="text/javascript">
+		/*******************闭包一************************/
+		/*var num=200;
+		function f1(){
+			var num=110;
+			function f2(){
+				console.log(num);
+			}
+			return f2;
+		}
+		var res=f1();
+		res();//110*/
+		/*******************闭包二************************/
+		/*function f1(){
+			var num =1000;
+			return function (){
+				console.log(num);
+			}
+		}
+		var res=f1();
+		res();//1000*/
+		/*******************闭包三************************/
+		/*var res=(function(){
+			var num=120;
+			return function(){
+				console.log(num);
+			};
+		})();
+		res();//120*/
+		/*******************闭包四************************/
+		/*var num =100;
+		var f=function(){
+			console.log(num);
+		};
+		function f1(){
+			var num=200;
+			return f;
+		}
+		var res =f1();
+		res();//100*/
+		/*******************闭包五************************/
+		//函数本身所处的作用域，取决于函数定义的位置，和函数调用的位置无关
+		/*var num=100;
+		var f=function(){
+			console.log(num);
+		};
+		function f1(){
+			var num=200;
+			f();
+		}
+		f1();*/
+		/*******************闭包六************************/
+		/*var lis=document.querySelectorAll('li');
+		for(var i =0; i<lis.length;i++){
+			(function(m){
+				lis[i].onclick=function(){
+				console.log('我是第'+m+'个li标签');
+			}
+			})(i);
+			
+		}*/
+       /*******************闭包七************************/
+		// function f1(){
+		// 	var num =100;
+		// 	return function(){
+		// 		console.log(num);
+		// 		num++;
+		// 	}
+		// }
+		// var res=f1();
+		// res();
+		// res();
+		// res();
+		// res();
+	</script>		
+</body>
+</html>

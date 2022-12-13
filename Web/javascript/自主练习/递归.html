@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>递归</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		/**********************例1*****************/
+		/*function f1(n){
+			if(n==0) return 0;
+			return n+f1(n-1);
+		}
+
+		var result=f1(100);
+		console.log(result);*/
+		/**********************例2*****************/
+		function f2(n){
+			if (n<=1) return n;
+			return f2(n-1)+f2(n-2);
+		}
+		var result=f2(20);
+		console.log(result);
+		/**********************例3*****************/
+	</script>		
+</body>
+</html>

@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>3-this.html</title>
+	<style>
+		.btn {
+			width: 30px;
+			height: 30px;
+			background-color: pink;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="btn"></div>
 	
 
 	<script type="text/javascript">
 		
+		let btn =document.querySelector('.btn')
 
-
-		// console.log(this);
+		//console.log(this);
 		// this指向：
 		
-		// 1、普通函数：window，调用者
+		// //1、普通函数：window，调用者
 		// function fn () {
 		// 	console.log(this);
 		// }
-		// fn();
+		// fn();//window
 
-		// 2、构造函数：实例化对象
+		// //2、构造函数：实例化对象
 		// function Perosn (uname, age) {
 		// 	this.uname = uname;
 		// 	this.age = age;
@@ -32,7 +39,7 @@
 		// let obj2 = new Perosn('李寻欢', 23);
 		// console.log(obj2);
 
-		// 3、方法：调用者
+		// //3、方法：调用者
 		// let obj = {
 		// 	uname : '张三丰',
 		// 	age : 22,
@@ -42,17 +49,17 @@
 		// }
 		// obj.fei();
 
-		// 4、事件处理函数：事件源
-		// document.addEventListener('click', function () {
+		// //4、事件处理函数：事件源
+		// btn.addEventListener('click', function () {
 		// 	console.log(this);
 		// });
 
-		// 5、定时器：window、调用者
+		// //5、定时器：window、调用者
 		// window.setInterval(function () {
 		// 	console.log(this);
 		// }, 1000)
 
-		// 6、自调用函数：window、调用者
+		// // 6、自调用函数：window、调用者
 		// ;(function () {
 		// 	console.log(this);
 		// })()
