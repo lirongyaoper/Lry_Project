@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-1_表格的行列合并</title>
+</head>
+<body>
+    <!-- 
+        表格的单元格有两个重要的属性是必须掌握的，这两个属性是用来做单元格合并的。
+        ● rowspan属性：垂直方向合并单元格，也叫跨行合并
+        ● colspan属性：水平方向合并单元格，也叫跨列合并
+        注意：合并都是从左往右，从上往下合并的。
+     -->  
+     <table border="1" width="600" height="500" cellspacing="0" align="center">
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td rowspan="3">33</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">41</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td>54</td>
+            <td>55</td>
+        </tr>
+    </table>     
+
+    <hr color="red" size="10" width="900">
+
+<!-- 既合并行又合并列 -->
+<table border="1" width="600" height="500" cellspacing="0" align="center">
+    <tr>
+        <td colspan="3" rowspan="2"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>      
+</body>
+</html>

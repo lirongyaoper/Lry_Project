@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_表格的重要属性.html</title>
+</head>
+<body>
+    <!-- 
+    ● 表格标签是要我们掌握的，表格的属性就是对表格的表现形式做一些修饰。
+    ● 所以对于表格的属性我们了解即可，后面我们通过CSS去设置表格的样式。
+    ● 下面是表格的属性：所有的属性了解即可。
+      ○ border属性：可以设置表格的边框，值为数字。单位是px
+      ○ width属性和height属性：可以设置表格的宽度和高度。默认表格的宽度和高度都是由内容撑起的。
+      ○ align属性：可以设置表格水平对齐方式。可选值：left-默认，左对齐 center-居中 right-右对齐
+      ○ bgcolor属性：设置表格的背景颜色。
+      ○ bordercolor属性：设置边框的颜色
+      ○ background属性：设置背景图片，图片小的话会平铺
+      ○ cellpadding属性：单元格内边距，也就是单元格内容与单元格边框之间的距离
+      ○ cellspacing属性：单元格之间的距离。设置为0时单元格之间就没有距离了 
+    -->
+    <table border="1px" width="500" height="300" align="center" bgcolor="green"  bordercolor="blue" cellpadding="8" cellspacing="0">
+        <tr align="center">
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+        </tr>
+        <tr>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+        </tr>
+        <tr align="right">
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+        </tr>
+    </table>
+    <!-- 
+    表格中tr的属性如下，这些属性也都是了解的。
+    ● height：行的高度 行不要设置宽度，宽度就是表格的宽度
+    ● bgcolor：行的背景颜色
+    ● background：行的背景图片
+    ● align：行中内容的水平对齐方式 left center right
+    ● valign：行中内容的垂直对齐方式 top middle bottom
+     -->
+     <hr size="10px" align="center" color="red" width="900px">
+     <table border="1px" width="500" height="300" align="center" bgcolor="green"  bordercolor="blue" cellpadding="8" cellspacing="0">
+        <tr align="center" bgcolor="red" height="50px" valign="bottom">
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+        </tr>
+        <tr valign="top">
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+        </tr>
+        <tr align="right">
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+            <td>呵呵呵</td>
+        </tr>
+    </table>
+    <!-- 
+    表格的单元格有两个重要的属性是必须掌握的，这两个属性是用来做单元格合并的。
+    ● rowspan属性：垂直方向合并单元格，也叫跨行合并
+    ● colspan属性：水平方向合并单元格，也叫跨列合并
+    注意：合并都是从左往右，从上往下合并的。
+     -->
+
+</body>
+</html>
