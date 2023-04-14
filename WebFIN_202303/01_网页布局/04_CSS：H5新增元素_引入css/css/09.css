@@ -1,0 +1,6 @@
+/* 给 class="box" 的元素设置样式 */
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}

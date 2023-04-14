@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_表单练习2.html</title>
+</head>
+<body>
+    <form action="服务器的地址" method="get" name="form1">
+        <table>
+            <tr>
+                <td>*身份证类型：</td>
+                <td>
+                    <select name="idCardType">
+
+                        <option value="2">港澳台通行证</option>
+                        <option value="3">护照</option>
+                        <option value="1" selected>身份证</option>                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>*身份证号码：</td>
+                <td>
+                    <input type="text" name="idCard">
+                </td>
+            </tr>
+            <tr>
+                <td>*姓名：</td>
+                <td>
+                    <input type="text" placeholder="请输入与身份证一致的姓名">
+                </td>
+            </tr>
+            <tr>
+                <td>*身份证有效时间段：</td>
+                <td>
+                    <input type="radio" name="time" value="5">5年
+                    <input type="radio" name="time" value="10" checked>10年
+                    <input type="radio" name="time" value="20">20年
+                    <input type="radio" name="time" value="long">长期年
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="agree" value="1">我已阅读并同意<a href="#">《中国xxx资格网》</a>
+                </td>
+            </tr>
+        </table>
+    </form>   
+</body>
+</html>

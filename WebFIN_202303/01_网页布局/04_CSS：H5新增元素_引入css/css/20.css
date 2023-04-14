@@ -1,0 +1,49 @@
+.box{
+    width: 1000px;
+    height: 1100px;
+    background-color: red;
+}
+
+.top{
+    width: 1000px;
+    height: 500px;
+    background-color: palegoldenrod;
+}
+
+.bottom{
+    width: 1000px;
+    height: 600px;
+    background-color: palevioletred;
+}
+
+.left{
+    width: 50%;
+    height: 500px;
+    background-color: peru;
+
+    float: left;
+}
+
+.right{
+    width: 50%;
+    height: 500px;
+    background-color: yellow;
+
+    float: left;
+}
+
+.box2{
+    width: 250px;
+    height: 300px;
+    background-color: blanchedalmond;
+    float: left;
+}
+
+.d1{
+    background-color: palevioletred;
+}
+
+/* 
+    目前我们在布局的时候之所以设置背景颜色，是因为通过颜色，
+    我们可以直观看出自己有没有布局好！
+*/
