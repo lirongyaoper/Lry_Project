@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        h5 新增了视频和音频。
+        之前没有对视频和音频的支持时，我们在浏览器中播放视频和音频还需要借助于第三方的软件，比如flash。
+
+        视频标签：video。属性有：
+        1. src：指定视频的地址路径
+        2. width：设置视频播放器的宽度
+        3. height：设置视频播放器的高度
+        4. controls：显示控制面板
+        5. muted：静音
+        6. autoplay：自动播放，要想能自动播放，必须设置静音
+        7. preload：当页面加载完毕后，就会预先加载视频；如果有autoplay的话，可以不写它
+        8. poster：可以设置视频的封面
+        9. loop：循环，可以使视频循环播放
+     -->
+
+    <video height="400" loop poster="./images/1.webp" preload width="400" 
+        controls src="./images/video2.mp4">您的浏览器不支持视频播放，请升级</video>
+</body>
+
+</html>
