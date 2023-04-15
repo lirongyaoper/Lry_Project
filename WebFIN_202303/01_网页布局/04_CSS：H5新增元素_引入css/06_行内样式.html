@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.行内样式.html</title>
+</head>
+<body>
+    <!-- 
+        行内样式：
+        行内样式就是将CSS样式直接写在 html 的开始标签中。
+        语法：
+            属性:属性值;
+
+        特点：
+            1. 写法简单
+            2. 不能复用
+            3. css代码和html代码混合在一块了，耦合性太强
+            不推荐使用
+
+        常见的css样式（属性）：
+        宽度 width    注意在css中单位是不能省略的！
+        高度 height
+        背景颜色 background-color
+
+        块元素的特点：
+        独占一整行，宽度默认是父元素的 100%，高度默认由内容撑起来，在页面垂直摆放！
+     -->
+
+    <!-- 
+        background-color 背景颜色
+        font-size 字体大小
+     -->   
+     <p style="background-color: red; font-size: 30px;">我是一个段落</p> 
+     <p style="background-color: blue; font-size: 30px; ">我也是一个段落</p>
+     <div style="width:200px; height: 100px; background-color: palevioletred;">
+        大家好
+    </div>
+    aaaaaaa
+    <div>
+        大家好！
+    </div>    
+</body>
+</html>
