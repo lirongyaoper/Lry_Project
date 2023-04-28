@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素选择器</title>
+    <style>
+        .box1>p{
+            background-color: red;
+        }
+
+        .pp>a{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        子元素选择器
+        1. 选择父元素中指定的子元素
+        2. 语法格式：
+            父元素>子元素{
+                属性:属性值;
+            }
+     -->
+     <div class="box1">
+        <p>box1里面的段落-1</p>
+        <p>box1里面的段落-2</p>   
+        <h1>box1里面的h1</h1>     
+     </div>    
+     <p>段落3</p>
+     <p>段落4</p>
+     <p class="pp">
+        <a href="#">超链接1</a>
+        <a href="#">超链接2</a>
+        <div>
+            <a href="#">超链接4</a>
+        </div>
+     </p>    
+     <a href="#">超链接5</a> 
+</body>
+</html>

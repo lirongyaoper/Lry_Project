@@ -23,8 +23,10 @@
 .content{
     /* 块元素不设置宽度的话，宽度默认是父元素的100% */
     /* width: 900px; */
+
+    /* 因为子类浮动，父类若不能高度，则不能被子类撑起。 ---荣耀科技*/
     height: 300px;
-    background-color: palevioletred;
+    background-color: yellow;
 }
 
 /* 
@@ -56,5 +58,5 @@
 .footer{
     width: 100%;
     height: 150px;
-    background-color: aquamarine;
+    background-color: black;
 }
