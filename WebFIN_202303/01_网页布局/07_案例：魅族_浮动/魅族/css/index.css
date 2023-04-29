@@ -1,0 +1,75 @@
+body{
+    font: 14px/1.5 Helvetica,Tahoma,Arial,Hiragino Sans GB,Microsoft YaHei,SimSun,Heiti,sans-serif;
+}
+/* banner样式开始 */
+.banner{
+    width: 100%;
+    height: 670px;
+    background-color: red;
+
+    /* 设置背景图片 */
+    background: url(./../images/92319e6e-3057-4883-9e09-29be628cb363.jpg) center no-repeat;
+}
+/* banner样式结束 */
+
+/* 导航开始 */
+.nav{
+    width: 788px;
+    height: 82px;
+    /* background-color: red; */
+    margin: 0 auto;
+}
+
+.nav li{
+    float: left;
+    padding: 31px 20px 30px;
+}
+.nav li a{
+    color: #333;
+}
+/* 导航结束 */
+
+/* 
+    因为整个页面好多地方都要居中，而且居中的div 宽度都是一样的。
+    所以，专门写一个居中的样式，只设置宽度 和 居中，不能设置高度
+*/
+
+.wrap{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 广告位开始 */
+.ad{
+    width: 100%;
+    height: 278px;
+    margin-bottom: 50px;
+    /* background-color: red; */
+}
+
+.ad-box{
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.ad-box>div{
+    width: 310px;
+    height: 187px;
+    padding-top: 45px;
+    /* background-color: palegreen; */
+    float: left;
+}
+
+.ad-box img{
+    width: 130px;
+}
+
+.ad-box .name{
+    color: #333;
+    font-size: 20px;
+}
+.ad-box .desc{
+    color: #999;
+    font-size: 14px;
+}
+/* 广告位结束 */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 303px;
+            height: 375px;
+            background-color: red;
+            position: relative;
+            overflow: hidden;
+        }
+        .box1 img{
+            width: 303px;
+        }
+        .box2{
+            width: 303px;
+            height: 375px;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 303px;
+            /* 这个属性后面讲 */
+            transition: all 2s;
+        }
+
+        .box1:hover>.box2{
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="./images/4197cdad-be8f-456d-b61d-7d06256cbf20.jpg" alt="">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

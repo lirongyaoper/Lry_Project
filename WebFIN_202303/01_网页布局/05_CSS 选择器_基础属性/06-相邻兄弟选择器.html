@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.相邻兄弟选择器.html</title>
+    <style>
+        .pp+p{
+            background-color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        相邻兄弟选择器
+        1. 相邻兄弟选择器就是选中某个元素后面紧挨着它的兄弟
+        2. 语法格式：
+            前一个兄弟+后一个兄弟{
+                属性:属性值;
+            }
+     -->    
+    <div>
+        <p>段落一</p>
+        <p>段落二</p>
+        <p class="pp">段落三</p>      
+        <p>段落四</p>
+        <p>段落五</p>                          
+    </div>
+</body>
+</html>

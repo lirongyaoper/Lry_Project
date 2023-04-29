@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-字体属性</title>
+    <style>
+        .box{
+            color: red;
+            font-style: italic;
+            font-weight:bolder ;
+            font-size: 40px;
+            font-family: 华文彩云222,宋体;
+        }
+        h1{
+            font-size: 16px;
+            font-weight: 400;
+            font-weight: 700;
+        }
+        i{
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        字体属性介绍：
+        1. 字体属性就是用来设置文字的各种样式的。
+        2. 目前学习的字体相关的属性有：
+            1) color 文字颜色
+            2) font-size 文字大小
+            3) font-weight 文字的粗细
+            4) font-style 字体是否斜体  
+            5) font-family 字体，比如宋体、黑体、微软雅黑
+
+
+        1. color 属性：可以设置字体的颜色。
+        2. font-size 属性：可以设置字体的大小。浏览器默认字体是16px，支持的最小字体是12px。
+        3. font-weight 属性：可以设置字体的粗细。可选值有：
+            1) normal 正常粗细
+            2) bold 加粗
+            3) bolder 更粗
+            4) light 细的
+            5) lighter 更细
+            6) 100、200、300、400、500、600、700、800、900
+                400就相当于normal，也就是正常粗细   ******************
+                700就相当于bold，也就是加粗   *******************
+        4. font-style 属性：可以设置字体倾斜。可选值有：
+            1) normal，默认，正常字体
+            2) italic 倾斜
+        5. font-family属性：设置字体。可以设置多个字体，设置多个字体的话，用逗号隔开。
+            比如： font-family: 宋体,微软雅黑;  如果用户电脑上支持第一个字体，那就用第一个，如果不支持的话，就尝试第二个
+     -->
+     
+     <!-- 荣耀科技笔记点：
+     1.font : style weight size family;
+     2.省略要求：只能省略前两个，如果省略了相当于设置了默认值
+      -->
+
+     <div class="box">
+        我是div中的内容。
+        <p>我是段落中的内容</p>
+        <!-- 这里超链接之所以颜色没有变红是因为它本身就有颜色，不会使用父亲的颜色样式 -->
+        <a href="#">我是超链接</a>
+    </div>
+    我是div外面的文字。
+
+    <h1>我是一级标题</h1>
+    <i>我是i标签中的内容</i>    
+</body>
+</html>

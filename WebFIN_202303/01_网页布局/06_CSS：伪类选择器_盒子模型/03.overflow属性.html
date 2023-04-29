@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* 溢出部分隐藏 */
+            overflow: hidden;
+            overflow: scroll;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        overflow属性
+        1. overflow属性：溢出的意思，可以对元素中溢出的那部分做设置。
+        2. 可选值有：
+            1) visible：默认值，不对溢出部分做任何处理
+            2) hidden：溢出部分隐藏
+            3) scroll：不论是否有溢出，都有滚动条
+            4) auto：有溢出，就有滚动条，没溢出就没有滚动条
+
+
+        对 overflow:hidden; 说明：
+        overflow:hidden; 除了有 将溢出部分隐藏 的作用外，
+        还有一个更重要的作用：就是对元素开启 BFC 格式，blocking format context，也就是块级格式上下文的意思。
+        也就是 元素开启BFC后，这个元素就是一个独立的元素，它的布局不受子元素的影响。
+     -->
+
+     <div class="box1">
+        Lorem ipsum dolor sit 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo totam, repudiandae natus eos aspernatur vel similique itaque temporibus explicabo dicta quisquam in dolorum possimus officiis minus omnis quae. Unde!
+     </div>
+</body>
+</html>

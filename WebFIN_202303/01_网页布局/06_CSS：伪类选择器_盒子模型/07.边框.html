@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            /* 设置宽度和高度，是设置给了内容区 */
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+
+            /* 设置边框 */
+            /* 边框边框宽度 4个边宽度一样 */
+            border-width: 10px;
+            /* 设置边框宽度 上下 左右*/
+            border-width: 10px 20px;
+            /* 设置边框宽度  上 左右 下*/
+            border-width: 10px 20px 30px;
+            /* 设置边框宽度 上 右 下 左   顺时针 */
+            border-width: 10px 20px 30px 40px;
+
+            /* 也可以单独设置某个方向的边框宽度 */
+            border-top-width: 50px;
+
+            /* 设置边框的颜色，默认是黑色 */
+            /* 4个边框都是红色 */
+            border-color: red;
+            border-color: red blue;
+            border-color: red blue green;
+            border-color: red blue green yellow;
+
+            border-right-color: #000;
+
+            /* 设置边框的样式。必须写的 */
+            border-style: double;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border-style: solid;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border-bottom: 3px solid red;
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            border: 2px solid orange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        边框(border)
+
+        1. 一个盒子有4个边框，border-top、border-bottom、boder-left、border-right
+        2. 边框由3部分样式组成：
+            1) 边框宽度 border-width    默认3px
+                border-width:数值;          4个边是一样的宽度
+                border-width:数值1 数值2;   上下 左右
+                border-width:数值1 数值2 数值3;  上 左右 下
+                border-width:数值1 数值2 数值3 数值4; 上 右 下 左   顺时针
+                注意这个规律，后面学习 边框颜色 边框样式 内边距 外边距 都是这个规律。
+
+                也可以单独给某个方向的边框设置：border-xxx-width，xxx 就是 top bottom left right
+            2) 边框颜色 border-color    默认黑色
+                和上面的边框宽度规律一样。一个值、二个值、三个值、四个值。也可以单独设置某个方向边框颜色
+            3) 边框样式 border-style 实线、虚线、点线、双实线等等
+                边框的样式是必写的一个属性。可选值有：
+                solid   实线  ********************
+                dotted  点线
+                dashed  虚线
+                double  双实现
+        3. 边框的简写：
+            1) 单方向的： ********************
+                border-top-width  border-top-color border-top-style
+                可以简写为：border-top:color style width;  属性值不区分前后顺序
+                        border-bottom、border-left、border-right
+            2) 4个方向：  ********************
+                简写为 border:style color width;  属性值不区分前后顺序
+                    比如：border:1px solid blue;
+
+        边框这部分最重要的是记住：边框由三部分组成，边框的简写(单方向的简写、4个方向的简写)
+        
+     -->
+    <div class="box1">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+    <div class="box3">
+
+    </div>
+    <div class="box4">
+
+    </div>
+</body>
+
+</html>

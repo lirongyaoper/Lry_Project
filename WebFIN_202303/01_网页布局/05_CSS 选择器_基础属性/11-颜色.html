@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            /* background-color: rgb(100, 200, 15); */
+            /* background-color: #11bb38; */
+            /* background-color: #abc; */
+            background-color: rgba(255, 0, 0, .2);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        颜色有哪些表示方法呢？
+        1. 可以使用颜色单词去表示颜色，比如 红色-red、蓝色-blue 等等
+       
+        2. 可以使用 rgb 表示颜色。
+            1) rgb 指的就是红色、绿色、蓝色，它们是三原色，通过它们的浓度的不同就可以调配出所有的颜色
+            2) 语法格式：rgb(红色的浓度,绿色的浓度,蓝色的浓度)
+            3) 浓度就是 0-255 之间的数，0表示最小，255最大
+            4) 浓度还可以使用百分比来表示，0%-0，100%-255，其实百分比还是最终转为 0-255 之间的数
+      
+        3. 可以使用 十六进制的 rgb 表示颜色 ********************************
+            1) 十六进制的rgb其实和上面第二种的原理一样，只不过是将颜色的浓度用 16 进制的数表示了
+            2) 十六进制的数有：0 1 2 3 4 5 6 7 8 9 a b c d e f
+            3) 之前 rbg 浓度是 0-255，现在换为16进制后，浓度就是 00-ff
+            4) 语法格式：#红色绿色蓝色，每种颜色都得用两位的16进制表示
+            5) 比如：#25aa2b、#aabbcc.
+            6) 像这种 #aabbcc 可以简写为 #abc，#112266 可以简写为 #126，但是 #112235 不能简写
+            7) 白色：#ffffff 简写 #fff，黑色 #000000 简写为 #000
+        4. 可以使用 rgba 表示颜色及透明度
+            1) 和 rbg 表示法差不多，就是多了个透明度
+            2) 语法格式：rgba(红色的浓度,绿色的浓度,蓝色的浓度,透明度)
+            3) 透明度：
+                0-完全透明
+                1-完全不透明
+                0.6 可以简写 .6
+     -->
+
+    <div class="box">
+
+    </div>
+</body>
+</html>

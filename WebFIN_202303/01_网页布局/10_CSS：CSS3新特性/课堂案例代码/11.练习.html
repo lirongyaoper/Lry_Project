@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 57px;
+            height: 64px;
+            padding: 0 10px;
+            background-color: #000;
+            color: #fff;
+            font-size: 14px;
+            line-height: 64px;
+            position: relative;
+        }
+
+        /* 
+            给 class="box1" 的元素里面的最后加伪元素，
+            加上的这个伪元素可以认为是div的子元素
+        */
+        .box1::after{
+            content: "";
+            width: 77px;
+            height: 2px;
+            background-color: yellowgreen;
+            display: block;
+            /* 开启相对定位，相对于最近的有定位的祖先元素 */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            /* 缩放为0，也就是将其缩没了 */
+            transform: scale(0);
+            transition: all 0.4s;
+        }
+
+        .box1:hover::after{
+            /* 缩放为1，表示跟原来一样大 */
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        产品中心
+    </div>
+</body>
+</html>
