@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素-lry</title>
+    <style>
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        /* 伪元素：一般页面中的非主体内容可以使用伪元素
+            1. 元素：HTML 设置的标签
+            2. 伪元素：由 CSS 模拟出的标签效果
+            3. 必须设置content属性才能生效
+            4. 伪元素默认是行内元素 */
+        .father::before{
+            content: "老鼠";
+            /* display: inline-block; */
+            width: 100px;
+            height: 100px;
+            color: green;
+            background-color: #fff;
+            background-color: pink;
+        }
+        .father::after{
+            content: "大米";
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 伪元素 通过css创建标签, 装饰性的不重要的小图 -->
+
+    <!-- 找父级, 在这个父级里面创建子级标签 -->
+
+    <div class="father">爱</div>
+
+    <!-- 老鼠爱大米 -->    
+</body>
+</html>
