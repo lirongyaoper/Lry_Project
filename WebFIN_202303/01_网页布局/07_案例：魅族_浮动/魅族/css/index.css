@@ -8,7 +8,7 @@ body{
     background-color: red;
 
     /* 设置背景图片 */
-    background: url(./../images/92319e6e-3057-4883-9e09-29be628cb363.jpg) center no-repeat;
+    background: url(../images/92319e6e-3057-4883-9e09-29be628cb363.jpg) center no-repeat;
 }
 /* banner样式结束 */
 
@@ -34,10 +34,7 @@ body{
     所以，专门写一个居中的样式，只设置宽度 和 居中，不能设置高度
 */
 
-.wrap{
-    width: 1240px;
-    margin: 0 auto;
-}
+
 
 /* 广告位开始 */
 .ad{
@@ -46,7 +43,10 @@ body{
     margin-bottom: 50px;
     /* background-color: red; */
 }
-
+.wrap{
+    width: 1240px;
+    margin: 0 auto;
+}
 .ad-box{
     height: 100%;
     /* background-color: aqua; */

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>02.利用伪元素解决高度塌陷-lry</title>
     <style>
         /* 演示利用伪元素解决高度塌陷的问题 */
         .box1{
             width: 500px;
+            background-color: green;
             border: 3px solid red;
         }
         .box2{
@@ -25,7 +26,7 @@
         }
 
         /* 利用伪元素解决高度塌陷 */
-        .clear::after{
+        .clearfloat::after{
             content: "";
             display: block;
             clear: both;
@@ -33,7 +34,7 @@
     </style>
 </head>
 <body>
-    <div class="box1 clear">
+    <div class="box1 clearfloat">
         <div class="box2"></div>
     </div>
 
