@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>transform:scale(x,y)-lry</title>
     <style>
         .box1{
             width: 200px;
             height: 200px;
             background-color: red;
             margin: 100px;
+            transition: all 2s;
         }
         .box1:hover{
             /* 取值是一个，表示水平方向的缩放，垂直方向等比例变化 */
-            transform: scale(0.5);
+            /* transform: scale(0.5); */
 
             transform: scale(1.5);
 
             /* 水平和垂直方向都缩放 */
-            transform: scale(1,1.5);
+            /* transform: scale(1.5,1.5); */
 
             /* 仅水平方向缩放 */
-            transform: scaleX(0.5);
+            /* transform: scaleX(0.5); */
             /* 仅垂直方向缩放 */
             transform: scaleY(1.5);
         }

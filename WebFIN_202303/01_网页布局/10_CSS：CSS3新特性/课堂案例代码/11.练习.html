@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>transform: scale()-lry</title>
     <style>
         .box1{
             width: 57px;
@@ -15,16 +15,38 @@
             font-size: 14px;
             line-height: 64px;
             position: relative;
+            margin: 100px auto;
+            border: 3px solid red;
         }
 
         /* 
             给 class="box1" 的元素里面的最后加伪元素，
             加上的这个伪元素可以认为是div的子元素
+
+
+
+        伪元素选择器           
+            1) 给某个元素内的最后面加伪元素(也可以理解为给某个元素内最后加个子元素)
+                :after{
+                    content:"";
+                }
+                或者
+                ::after{
+                    content:"";
+                }
+            2) 给某个元素内的最前面加伪元素(也可以理解为给某个元素内最前面加个子元素)
+                :before{
+                    content:"";
+                }
+                或者
+                ::before{
+                    content:"";
+                }            
         */
         .box1::after{
             content: "";
             width: 77px;
-            height: 2px;
+            height: 3px;
             background-color: yellowgreen;
             display: block;
             /* 开启相对定位，相对于最近的有定位的祖先元素 */

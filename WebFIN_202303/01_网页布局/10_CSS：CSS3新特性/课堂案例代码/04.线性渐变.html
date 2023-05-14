@@ -12,19 +12,22 @@
             height: 100px;
             /* 设置线性渐变颜色，渐变方向默认是从上到下 */
             background-image: linear-gradient(red,blue,green);
+            background: linear-gradient(to right, #30e8bf, #ff8235);
+
             /* 设置渐变方向 */
-            background-image: linear-gradient(to right,red,blue,green);
+            /* background-image: linear-gradient(to right,red,blue,green); */
 
             /* 渐变方向是角度 */
-            background-image: linear-gradient(30deg,red,blue,green);            
+            background-image: linear-gradient(10deg,red,blue,green);            
             /* background-image: linear-gradient(120deg,red,blue,green); */
+
         }
     </style>
 </head>
 
 <body>
     <!-- 
-        线性渐变
+        线性渐变 https://blog.csdn.net/hncu1990/article/details/118878493
 
         1. background-image:linear-gradient(渐变的方向,颜色1,颜色2,...);
         2. 渐变的方向默认是从上到下，也可以使用 to right，to right bottm 等等
