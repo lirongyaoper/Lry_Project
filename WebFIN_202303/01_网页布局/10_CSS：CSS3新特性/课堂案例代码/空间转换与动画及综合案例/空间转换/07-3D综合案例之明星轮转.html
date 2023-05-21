@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d综合案例</title>
+    <style>
+        body {
+            perspective: 1000px; 
+            /* //定义盒子 3D 透视
+                    //定义一个观察者的角度 X 轴、Y 轴 */
+            perspective-origin: 50% -150%;
+        }
+
+        @keyframes runY {
+            0% { 
+                        /* //定义沿 Y 轴的 3D 旋转 */
+                transform: rotateY(0deg);     
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        div {
+            width: 300px;
+            height: 180px;
+            margin: 400px auto;
+            position: relative;
+                /* //所有子元素在 3D 空间中呈现。 */
+            transform-style: preserve-3d;
+                /* //给盒子进行动画设置，让整体旋转。 */
+            animation: runY 10s linear infinite;
+
+        }
+
+        div>img {
+            width: 300px;
+            height: 180px;
+            position: absolute;
+            border-radius:20px;
+        }
+
+        div>img:nth-of-type(1) {
+                    /* //将图片设置为 3D 效果  可以自己调整 */
+            transform: rotateY(0deg) translateZ(300px);
+        }
+
+        div>img:nth-of-type(2) {
+            transform: rotateY(60deg) translateZ(300px);
+        }
+
+        div>img:nth-of-type(3) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+
+        div>img:nth-of-type(4) {
+            transform: rotateY(180deg) translateZ(300px);
+        }
+
+        div>img:nth-of-type(5) {
+            transform: rotateY(240deg) translateZ(300px);
+        }
+
+        div>img:nth-of-type(6) {
+            transform: rotateY(300deg) translateZ(300px);
+        }
+    </style>
+</head>
+	<body>
+		<div>
+			<img src="./img/1.jpg" alt=""> 
+			<img src="./img/2.jpg" alt="">
+			<img src="./img/3.jpg" alt="">
+			<img src="./img/4.jpg" alt="">
+			<img src="./img/5.jpg" alt="">
+			<img src="./img/6.jpg" alt="">
+ 
+		</div>
+	</body>
+ 
+</html>
