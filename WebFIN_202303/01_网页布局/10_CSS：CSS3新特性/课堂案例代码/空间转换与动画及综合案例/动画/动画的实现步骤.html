@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画实现的步骤-lry</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            animation: change2 2s;
+        }
+
+        @keyframes change1 {
+            from{
+                width: 200px;
+            }to {
+                width: 600px;
+            }
+        }
+
+        @keyframes change2{
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 300px;
+            }
+            100%{
+                width: 900px;
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
