@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体验精灵动画-网页时钟-lry</title>
+    <style>
+        .clock {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 8px solid #000;
+            border-radius: 50%;
+        }
+        .line {
+            position: absolute;
+            /* 让块级元素在父元素中居中 */
+            left: 50%;
+            transform: translate(-50%);
+
+            width: 10px;
+            height: 200px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <!-- 刻度线 -->
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <!-- 遮罩 层     -->
+        <div class="mask"></div>
+        <!-- 表针 -->
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+        <!-- 螺丝 -->
+        <div class="dotted"></div>
+    </div>
+</body>
+</html>
