@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        闭包
+
+        1. 如果在一个函数外部想访问函数内的变量，可以在函数内部再定义一个函数，内层函数是可以访问外层函数的变量的，
+            然后将内层函数返回，返回到外部，就到达了在外层函数外部访问它里面变量的情况了！
+
+        2. 简单来说，上面的内层函数就是闭包！
+
+        3. 基本用法：
+            function fun1(){
+                let num = 100;
+
+                return function(){
+                    console.log(num);
+                }
+            }
+
+            let fn = fun1(); // fn = function(){ console.log(num) }
+
+            fn();
+
+
+        闭包的特点：
+        1. 可以读取外层函数内的变量
+        2. 让外层函数内的变量始终保存在内存中，缺点，耗费内存
+        
+     -->
+
+    <script>
+        function fun1(num){
+            return function(){
+                console.log(++num);
+            } 
+        }
+
+        let fn = fun1(2); // fn = function(){ console.log(++num); }
+        fn(); // 3
+        fn(); // 4
+        fn(); // 5
+
+        let fn2 = fun1(2);
+        fn2(); // 3
+        fn2(); // 4
+        fn2(); // 5
+    </script>
+</body>
+
+</html>

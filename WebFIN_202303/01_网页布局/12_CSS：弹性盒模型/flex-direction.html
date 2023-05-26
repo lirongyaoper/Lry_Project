@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction lry</title>
+    <style>
+        .box{
+            width: 100%;
+            height: 800px;
+            background-color: skyblue;
+            display: flex;
+            /* 默认值，弹性项目从左往右排列 */
+            flex-direction: row;
+                    /* 弹性项目从右往左 */
+            flex-direction: row-reverse;
+            /* 弹性项目从上往下纵向排列 */
+            flex-direction: column;
+            /* 弹性项目从下往上纵向排列 */
+            flex-direction: column-reverse;
+        }
+
+        .box div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box>div:nth-child(2){
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>    
+</body>
+</html>

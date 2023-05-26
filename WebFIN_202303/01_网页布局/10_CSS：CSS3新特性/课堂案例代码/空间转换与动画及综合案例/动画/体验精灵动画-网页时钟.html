@@ -24,6 +24,82 @@
             height: 200px;
             background-color: #ccc;
         }
+        .line:nth-child(2){
+            transform: translate(-50%) rotate(30deg);
+        }
+        .line:nth-child(3){
+            transform: translate(-50%) rotate(60deg);
+        }
+
+        .line:nth-child(4) {
+            transform:  translate(-50%) rotate(90deg);
+        }
+        .line:nth-child(5) {
+            transform: translate(-50%)  rotate(120deg);
+        }
+        .line:nth-child(6) {
+            transform: translate(-50%) rotate(150deg);
+        } 
+
+        .mask{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 140px;
+            height: 140px;
+            background-color: rgb(255,255,255);
+            border-radius: 50%;
+
+        }
+
+        .hour,
+        .minute,
+        .second{
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform-origin: center bottom;
+        }
+
+        .hour{
+            width: 6px;
+            height: 40px;
+            background-color: #000;
+            transform: translate(-50%) rotate(45deg);
+        }
+        .minute {
+            width: 4px;
+            height: 50px;
+            background-color: #000;
+            transform: translate(-50%) rotate(90deg);
+        }
+        .second {
+            width: 2px;
+            height: 60px;
+            background-color: red;
+            transform: translate(-50%) rotate(225deg);
+            animation: rotate 60s steps(60) infinite;
+        } 
+        /* 螺丝 */
+        .dotted {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background-color: #000;
+            border-radius: 50%;
+        }     
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }                  
     </style>
 </head>
 <body>

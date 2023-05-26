@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+            分析：
+                五局三胜，意思是谁先赢到3局，谁就胜利了，游戏也就结束了。
+                我们在游戏时，是不确定要玩几次才能取得胜利！
+
+                人的输入：使用 prompt()  0 1 2
+                电脑的输入：使用随机 0 1 2
+        */
+
+        var playerWinCount = 0; // 玩家赢的次数
+        var computerWinCount = 0; // 电脑赢的次数
+
+        while (playerWinCount < 3 && computerWinCount < 3) {
+            var playerNum = Number(prompt('请输入你的选择：0--石头、1--剪刀、2--布'));
+            var computerNum = ~~(Math.random() * 3);
+
+            if (playerNum == 0) { // 人出的是石头
+                if (computerNum == 0) { // 电脑出的是石头
+                    console.log('平局!');
+                } else if (computerNum == 1) { // 电脑出的剪刀
+                    console.log('玩家赢！');
+                    playerWinCount++;
+                } else { // 电脑出的是 布
+                    console.log('电脑赢！');
+                    computerWinCount++;
+                }
+            } else if (playerNum == 1) { // 人出的是剪刀
+                if (computerNum == 0) { // 电脑出的是石头
+                    console.log('电脑赢！');
+                    computerWinCount++;
+                } else if (computerNum == 1) { // 电脑出的剪刀
+                    console.log('平局!');
+                } else { // 电脑出的是 布
+                    console.log('玩家赢！');
+                    playerWinCount++;
+                }
+            } else if (playerNum == 2) { // 人出的是布
+                if (computerNum == 0) { // 电脑出的是石头
+                    console.log('玩家赢！');
+                    playerWinCount++;
+                } else if (computerNum == 1) { // 电脑出的剪刀
+                    console.log('电脑赢！');
+                    computerWinCount++;
+                } else { // 电脑出的是 布
+                    console.log('平局!');
+                }
+            }
+        }
+
+        // 一旦代码能执行到这里，说明有一方赢的次数达到3次了
+        console.log(`电脑:玩家=${computerWinCount}:${playerWinCount}`);
+    </script>
+</body>
+
+</html>

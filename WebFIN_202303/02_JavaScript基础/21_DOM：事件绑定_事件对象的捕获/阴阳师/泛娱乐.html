@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .box {
+            width: 1180px;
+            height: 516px;
+            /* background-color: skyblue; */
+            margin: 50px auto;
+        }
+
+        .fun_box {
+            position: relative;
+            width: 1060px;
+            height: 516px;
+            /* background-color: brown; */
+            float: right;
+        }
+
+        .fun_con {
+            position: relative;
+            overflow: hidden;
+            width: 1060px;
+            height: 536px;
+            /* background-color: palegoldenrod; */
+        }
+
+        .fun_con>ul {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 2300px;
+            height: 516px;
+            /* background-color: paleturquoise; */
+            transition: all 0.8s;
+        }
+
+        .fun_con>ul>li {
+            width: 220px;
+            height: 516px;
+            margin-right: 10px;
+            float: left;
+            transition: all 0.4s ease;
+            /* background-color: peachpuff; */
+        }
+
+        .fun_con>ul>li:hover{
+            transform: translateY(-20px);
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+            display: block;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #c2a060;
+            line-height: 70px;
+            background-color: #fff;
+        }
+
+        .left {
+            left: -36px;
+            display: none;
+        }
+
+        .right {
+            right: -36px;
+        }
+
+        .left>i,
+        .right>i {
+            width: 47px;
+            height: 9px;
+            display: block;
+            margin: 32px auto 0;
+        }
+
+        .left>i {
+            background: url(./images/zuo_jiantou.png) no-repeat;
+        }
+
+        .right>i {
+            background: url(./images/you_jiantou.png) no-repeat;
+        }
+
+        @keyframes ani1 {
+            0%{
+                transform: translateX(0);
+            }
+            20%{
+                transform: translateX(-9px);
+            }
+            40%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(-4px);
+            }
+            70%{
+                transform: translateX(0);
+            }
+            90%{
+                transform: translateX(-1px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="fun_box">
+            <div class="fun_con">
+                <ul>
+                    <li><a href="#"><img src="./images/1.gif" alt=""></a></li>
+                    <li><a href="#"><img src="./images/2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/5.gif" alt=""></a></li>
+                    <li><a href="#"><img src="./images/6.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/7.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/8.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/9.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/10.png" alt=""></a></li>
+                </ul>
+            </div>
+            <a href="#" class="left">
+                <i></i>
+            </a>
+            <a href="#" class="right">
+                <i></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 获取右箭头元素
+        let rightBtn = document.querySelector('.right');
+        let leftBtn = document.querySelector('.left');
+
+        // 给右箭头绑定点击事件，每点击一次 ul 向左移动 230px
+        rightBtn.onclick = function(){
+            // 获取ul元素
+            let ul = document.querySelector('.fun_con ul');
+            // 获取ul元素的 left 值
+            let left = getComputedStyle(ul).left;
+            // 获取到的left值是 xxx像素，需要将数字解析出来
+            left = parseInt(left);
+            // 自减 230
+            left -= 230;
+
+            if(left <= -1380){
+                left = -1380;
+                rightBtn.style.display = 'none';
+            }
+
+             // 将样式设置回去
+             ul.style.left = left + 'px';
+
+             if(left <= -230){
+                leftBtn.style.display = 'block';
+             }
+        }
+
+        leftBtn.onclick = function(){
+            // 获取ul元素
+            let ul = document.querySelector('.fun_con ul');
+            // 获取ul元素的 left 值
+            let left = getComputedStyle(ul).left;
+            // 获取到的left值是 xxx像素，需要将数字解析出来
+            left = parseInt(left);
+
+            left += 230;
+            if(left >= 0){
+                left = 0;
+                leftBtn.style.display = 'none';
+            }
+
+            if(left > -1380){
+                rightBtn.style.display = 'block';
+            }
+
+            // 将样式设置回去
+            ul.style.left = left + 'px';
+        }
+
+        rightBtn.onmouseover = function(){
+            rightBtn.children[0].style.animation = 'ani1 1s ease-in';
+        }
+        rightBtn.onmouseout = function(){
+            rightBtn.children[0].style.animation = '';
+        }
+    </script>
+</body>
+</html>

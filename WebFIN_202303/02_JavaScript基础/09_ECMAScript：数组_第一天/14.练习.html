@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.新建一个空数组，往数组中添加 10 个随机数，随机数的范围是[1,100]
+        // let arr1 = [];
+
+        // for(let i = 0; i < 10; i++){
+        //     arr1[i] = ~~(Math.random() * 100 + 1);
+        // }
+
+        // console.log(arr1);
+
+        // 2.创建一个函数，功能是：可以创建任意长度的数组，并且数组中的元素为任意范围内的随机数
+
+        // 箭头函数实现
+        // let fun2 = (len, min, max) => {
+        //     let arr = [];
+        //     for(let i = 0; i < len; i++){
+        //         arr[i] = ~~(Math.random()*(max - min + 1) + min);
+        //     }
+        //     return arr;
+        // }; 
+
+        // let arr = fun2(8, 90, 100);
+        // console.log(arr);
+
+        // 之前的写法
+        // function fun1(len, min, max){ // 参数1-数组的长度  参数2-最小值  参数3-最大值
+        //     let arr = [];
+        //     for(let i = 0; i < len; i++){
+        //         arr[i] = ~~(Math.random()*(max - min + 1) + min);
+        //     }
+
+        //     return arr;
+        // }
+
+        // let arr = fun1(10, 50, 80);
+        // console.log(arr);
+
+        // 3.创建一个函数，功能是：对任意的数组求元素的和
+        let fun3 = (a) => {
+            let sum = 0;
+            for (let i = 0; i < a.length; i++) {
+                sum += a[i];
+            }
+
+            return sum;
+        };
+
+        let arr = [10, 20, 30, 40];
+        let result = fun3(arr);
+        console.log(result);
+    </script>
+</body>
+
+</html>

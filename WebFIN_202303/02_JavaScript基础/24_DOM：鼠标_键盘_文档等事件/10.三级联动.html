@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        select{
+            width: 80px;
+            height: 30px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <select id="province">
+        <option value="">请选择</option>
+    </select>
+    <span>省</span>
+    <select id="city">
+        <option value="">请选择</option>
+    </select>
+    <span>市</span>
+    <select id="county">
+        <option value="">请选择</option>
+    </select>
+    <span>县</span>
+
+    <script>
+        // 创建数组存放省的数据
+        let provinceData = ['山西', '山东', '河南', '河北'];
+        let province = document.querySelector('#province');
+        let city = document.querySelector('#city');
+
+        // 利用循环将省的数据添加到下拉列表中
+        for(let i = 0; i < provinceData.length; i++){
+            let option = document.createElement('option');
+            province.appendChild(option);
+
+            option.innerHTML = provinceData[i];
+            option.value = i;
+        }
+
+        // 城市的数组
+        let cityData = [
+            ['太原', '临汾'],
+            ['济南', '青岛'],
+            ['开封', '郑州', '洛阳'],
+            ['石家庄', '衡水']
+        ];
+
+        // 给省的下拉列表绑定内容改变事件
+        province.onchange = () => {
+
+            // 先去掉之前的城市
+            city.length = 1;
+            
+            for(let i = 0; i < cityData[province.value].length; i++){
+                let option = document.createElement('option');
+                city.appendChild(option);
+                option.innerHTML = cityData[province.value][i];
+
+                option.value = i;
+            }
+
+        };
+    </script>
+</body>
+</html>

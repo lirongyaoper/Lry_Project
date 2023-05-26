@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        强制类型转换
+
+        强制类型转换：就是我们调用相应的函数去完成数据类型的转换。
+
+        1. 转为 number 类型
+            使用 Number() 函数，可以实现将 string、boolean 类型转为 number 类型
+            其实JS在帮我们做自动类型转换的时候，底层用的也是该方法。
+        
+        2. 转为 string 类型
+            使用 String() 函数，可以实现将 number、boolean 类型转为 String 类型
+
+        3. 转为 boolean 类型
+            使用 Boolean() 函数，可以实现将 string、number 类型 转为 boolean 类型
+            除了：0 '' null undefined false NaN 外，其它的数据都会转为 true
+     -->
+    <script>
+        // 字符串转为 number
+        // console.log(Number('123'));
+        // console.log(Number('12.3'));
+        // console.log(Number('你好'));// NaN
+        // console.log(Number('1.2.3'));// NaN
+        // console.log(Number('  12.3   '));
+        // console.log(Number('1   2   3'));// NaN
+
+        // 布尔转为 number
+        // console.log(Number(true));// 1
+        // console.log(Number(false));// 0
+
+        // Number() 函数有返回值，返回的就是转换后的结果
+        // var r = Number('1234');
+        // console.log(r);
+
+        // console.log(Number(null));
+        // console.log(Number(undefined));
+        // console.log(Number(''));
+
+        // 将 number 转为 string
+        // console.log(String(123));
+        // console.log(String(12.3));
+        // console.log(String(0));
+
+        // 将 boolean 转为 string 
+        // console.log(String(true));
+        // console.log(String(false));
+
+        // console.log(String(null));
+        // console.log(String(undefined));
+
+        // 将 string 类型转为 boolean 类型
+        console.log(Boolean('123'));
+        console.log(Boolean('哈哈'));
+
+        // 将 number 类型 转为 boolean 类型
+        console.log(Boolean(123));
+
+        console.log(Boolean(null));
+        console.log(Boolean(''));
+        console.log(Boolean(false));
+        console.log(Boolean(NaN));
+        console.log(Boolean(0));
+        console.log(Boolean(undefined));
+    </script>
+</body>
+
+</html>

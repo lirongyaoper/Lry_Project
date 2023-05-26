@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 在一个函数内部，声明变量的时候，没有使用 var、let，也可以，这样声明的变量是一个全局变量
+        // function fun1(){
+        //     num = 1000;
+        // }
+
+        // fun1();
+
+        // console.log(num); // 1000
+
+        var num1 = 10; // 全局变量
+        var num2 = 20; // 全局变量
+
+        function fun1(){ // fun1是属于全局作用域的
+            console.log(num1); // 10，自己没有，就往上走，用的是全局作用域的
+            var num2 = 200; // 局部变量，在 fun1 函数内都可以使用
+            console.log(num2); // 200，自己所在的作用域有，就用自己的
+
+            function fun2(){ // fun2 是在 fun1 这个函数作用域内的
+                console.log(num2); // 200
+                var num3 = 30;
+                console.log(num3); // 30
+
+                function fun3(){
+                    var num4 = 40;
+                    var num2 = 2000;
+                    console.log(num1); // 10
+                    console.log(num2); // 2000
+                    console.log(num3); // 30
+                    console.log(num4); // 40
+                }
+                fun3();
+            }
+            fun2();
+        }
+        fun1();
+
+    </script>
+</body>
+
+</html>

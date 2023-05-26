@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = true && false;
+        console.log(a);
+
+        var b = true || false;
+        console.log(b);
+
+        // 非布尔类型的值参与逻辑运算，最终的结果不是true或者false，是某个表达式的值
+        var c = "" && '哈哈';
+        console.log(c);
+
+        var d = "" || "呵呵";
+        console.log(d);
+
+    </script>
+</body>
+
+</html>

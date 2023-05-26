@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-shrink 属性 走马灯--lry</title>
+    <style>
+        .box1{
+            width: 500px;
+            background-color: red;
+            /* 开启弹性盒模型，元素默认会水平摆放，当子元素宽度之和大于父元素宽度后，默认会压缩 */
+            display: flex;
+        }
+        .box1>div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* 设置子元素的压缩规则,超出父元素的宽度按照比例是1压缩 */
+            flex-shrink: 1;
+        }
+        .box1>div:nth-child(2n){
+            background-color: pink;
+            /* 设置元素的压缩规则，超出父元素的宽度按照比例是2压缩Q */
+            flex-shrink: 2;
+        }
+        /* 
+            最终，超出的部分宽度是500px，然后按照 1:2:1:2:1 的方式压缩。
+            每份是 71px左右，所以第一个小div宽度变为 129左右，第二个div宽度变为 58px 左右。
+        */
+    </style>    
+</head>
+<body>
+    <div class="box1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>    
+</body>
+</html>

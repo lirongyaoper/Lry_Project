@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow 属性 lry难点</title>
+    <style>
+        .box{
+            width: 100%;
+            background-color: skyblue;
+            /* 开启弹性盒模型，里面的子元素默认水平排列 */
+            display: flex;
+        }
+        .box>div{
+            /* width: 200px; */
+            /* width: 33.3%; */
+            /* 设置元素宽度的比例，是将弹性父元素中剩余空间按照该比例去分配给每个子元素的 */
+            flex-grow: 1;
+            height: 200px;
+            background-color: red;
+        }
+        .box>div:nth-child(2){
+            background-color: blue;
+            /* 设置元素宽度的比例 */
+            flex-grow: 2;
+        }
+    </style>    
+</head>
+<body>
+    <div class="box">
+        <!-- 这里的内容开始写为1，后面再加长一些 -->
+        <div>122222222223ee33333333333333333333333333333333333333322</div>
+        <div>2</div>
+        <div>3</div>
+   </div>    
+</body>
+</html>

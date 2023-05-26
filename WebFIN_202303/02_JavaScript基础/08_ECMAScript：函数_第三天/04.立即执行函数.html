@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        立即执行函数
+
+        1. 我们知道，函数声明后，默认是不会执行的，需要通过事件驱动或者调用才会执行
+            目前，我们会使用调用执行函数。
+        2. 调用函数的格式： 函数名();   () 称为执行符
+
+        3. 立即执行函数，也称为自执行函数，也称 IIFE。立即执行函数就是不需要我们去调用，写完后自己就能执行。
+
+        4. 函数的声明方式有三种：
+            1) 函数表达式法
+            2) 构造函数法
+            3) funtion 命令法
+        
+        5. 声明一个函数，然后将其变为立即执行函数，就不能再通过 函数名(); 去调用执行了！
+
+        6. 使用 函数表达式法 和 构造函数法 声明的函数要变为立即执行函数，只需要在它们后面直接写 () 就行。
+            使用 funtion 命令法 声明的函数要变为立即执行函数，不能在后面直接写 ()。
+
+            JS中规定：以function开头的称为语句，不以function开头的称为表达式，表达式后面可以直接写 ()，
+                    语句后面不能直接写 ()
+
+            所以说，使用 funtion 命令法 声明的函数要变为立即执行函数，核心思想就不要让 function开头就行，
+            一般我们就使用 小括号把函数声明扩起来。
+     -->
+
+    <script>
+        // 演示函数表达式法声明的函数变为立即执行函数
+        // var fun1 = function (){
+        //     console.log(123);
+        // }();
+        
+        // fun1(); //报错
+
+        // 演示构造函数法声明的函数变为立即执行函数
+        // var fun2 = new Function('console.log(456);')();
+
+        //fun2();//报错
+
+        // 演示function命令法声明的函数变为立即执行函数
+        // (function fun3(){
+        //     console.log(123);
+        // })();
+
+        // 或者
+        // (function fun3(){
+        //     console.log(123);
+        // }());
+
+        // fun3();
+
+        
+        // '你好' && function fun4(){console.log(789);}();
+
+        // '' || function fun4(){console.log(852);}(); 
+
+
+        // setInterval(function(){},xx);
+
+        // (function(){})();
+
+        // (function(){}());
+
+        // (function(){})();  
+
+        true && function(){console.log(123);}();
+
+    </script>
+
+</body>
+
+</html>

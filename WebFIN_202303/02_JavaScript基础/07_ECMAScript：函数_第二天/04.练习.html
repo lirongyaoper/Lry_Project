@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.定义函数，计算两个数的和
+        // function fun1(num1, num2){
+        //     return num1 + num2;
+        // }
+
+        // var result = fun1(3, 9);
+        // console.log(result);
+
+        // 2.定义函数，返回一个布尔值，返回true 和 false 的概率各占50%，打印1000次进行测试
+        // function fun2(){
+        //     // 生成一个 [0,1] 的随机整数
+        //     var num = ~~(Math.random()*2);
+        //     return num == 1 ? true : false;
+        // }
+
+        // var trueCount = 0;
+        // var falseCount = 0;
+        // for(var i = 1; i <= 1000; i++){
+        //     var result = fun2();
+        //     if(result){
+        //         trueCount++;
+        //     }else{
+        //         falseCount++;
+        //     }
+        // }
+
+        // console.log(`true的个数是：${trueCount}，false的个数是：${falseCount}`);
+
+        // 3.某公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的。
+        // 加密规则如下：每位数字都加上5，然后用除以10的余数代替该数字，再将第一位和第四位交换，
+        // 第二位和第三位交换，请编写一个函数，传入明文，输出密文。
+
+        // function fun3(num){ // 4532
+        //     var geWei = num % 10; // 2
+        //     var shiWei = ~~(num / 10) % 10;
+        //     var baiWei = ~~(num / 100) % 10;
+        //     var qianWei = ~~(num / 1000);
+
+        //     geWei = (geWei + 5) % 10;
+        //     shiWei = (shiWei + 5) % 10;
+        //     baiWei = (baiWei + 5) % 10;
+        //     qianWei = (qianWei + 5) % 10;  
+
+        //     // qianWei baiWei shiWei geWei 
+        //     return geWei * 1000 + shiWei * 100 + baiWei * 10 + qianWei * 1;
+        // }
+
+        // // 生成一个[1000,9999]的随机整数
+        // var num = ~~(Math.random()*9000 + 1000);
+        // var result = fun3(num);
+
+        // console.log(`明文：${num}，密文是：${result}`);
+
+        // 4.在控制台打印任意整数的二进制的字符串表现形式
+        function fun4(num){ // 15
+            // 将num转为二进制，然后打印出来
+            //将十进制数，转为二进制的思路是：
+            //不断的使用十进制数除以2，取得余数，将余数逆序排列。
+            //除到商为0的时候，就不用除了！
+
+            var result = '';
+            while(num != 0){
+                //每次除以2得到的余数，逆序写
+                result = num % 2 + result; // '1'
+
+                //不断的除以2
+                num = ~~(num / 2);
+            }
+
+            return result;
+        }
+
+        var r = fun4(2);
+        console.log(r);
+
+
+    </script>
+</body>
+
+</html>

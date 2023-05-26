@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: fixed;
+            bottom: -200px;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #ff6700;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>x</span>
+    </div>
+
+    <script>
+        let div = document.querySelector('.box');
+        let bottomDis = getComputedStyle(div).bottom;
+        bottomDis = parseInt(bottomDis);
+
+        setInterval(() => {
+            bottomDis += 10;
+            if (bottomDis >= 0) {
+                bottomDis = 0;
+            }
+            div.style.bottom = bottomDis + 'px';
+        }, 50);
+
+        let span = document.querySelector('span');
+        span.onclick = () => {
+            div.style.display = 'none';
+        };
+    </script>
+</body>
+
+</html>
