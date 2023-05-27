@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>比较运算符lry</title>
 </head>
 
 <body>
@@ -20,14 +20,19 @@
         // === 以后判断要用  ===  开发常用   要求值和数据类型都一样
         console.log(5 === 5)
         console.log(5 === '5')
+
+
+
         // 特殊情况
         console.log('pink' > 'red')
         console.log('pink' > 'pin')
         console.log(1 === NaN)
+
+        // NaN不等于任何值，包括它本身
         console.log(NaN === NaN)
+        // 尽量不要比较小数，因为小数有精度问题
         console.log(0.1 + 0.2 === 0.3)
         console.log(0.1 + 0.2)
-
         console.log(3 > '2')
     </script>
 </body>

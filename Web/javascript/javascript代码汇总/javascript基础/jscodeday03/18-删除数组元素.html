@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>删除数组元素lry</title>
 </head>
 
 <body>
@@ -26,8 +26,60 @@
         // 第二1 是删除几个
         // arr.splice(1, 1)
         // arr.splice(1)
+
+
+
         console.log(arr)
+
+        
     </script>
 </body>
+`arr.splice()` 是 JavaScript 中一个非常实用的数组方法，它可以用来添加、删除或替换数组的元素。`arr.splice()` 方法具有以下特性：
 
+- 它可以在数组中插入/添加元素。
+- 它可以删除数组中的元素。
+- 它可以替换数组中的元素。
+- 它返回一个由删除的元素组成的新数组。
+
+`arr.splice()` 的语法如下：
+
+```javascript
+arr.splice(startIndex, deleteCount, item1, item2, ...);
+```
+
+参数说明：
+
+- `startIndex`（必须）：要开始修改数组的索引（位置）。如果值是负数，则表示从数组末尾开始计数。
+- `deleteCount`（可选）：要从数组中删除的元素数量。如果省略此参数或值为 0，则不删除任何元素。
+- `item1, item2, ...`（可选）：要插入数组的元素。
+
+以下是 `arr.splice()` 方法的一些使用示例：
+
+1. 添加元素：
+   ```javascript
+   let arr = [1, 2, 3, 4];
+   arr.splice(2, 0, "a", "b");
+   console.log(arr); // 输出：[1, 2, "a", "b", 3, 4]
+   ```
+   此示例在索引为 2 的位置插入了元素 "a" 和 "b"。
+
+2. 删除元素：
+   ```javascript
+   let arr = [1, 2, 3, 4];
+   let removedElements = arr.splice(1, 2);
+   console.log(arr); // 输出：[1, 4]
+   console.log(removedElements); // 输出：[2, 3]
+   ```
+   此示例从索引 1 开始删除了 2 个元素。
+
+3. 替换元素：
+   ```javascript
+   let arr = [1, 2, 3, 4];
+   let removedElements = arr.splice(1, 1, "a");
+   console.log(arr); // 输出：[1, "a", 3, 4]
+   console.log(removedElements); // 输出：[2]
+   ```
+   此示例将索引为 1 的元素替换为 "a"。
+
+当您使用 `arr.splice()` 时，请记住更改是直接应用于原始数组上的，而不是创建一个新的修改后的数组。返回的数组只包含已删除的元素。
 </html>

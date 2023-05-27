@@ -5,21 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>var和let区别 lry</title>
 </head>
 
 <body>
+
     <script>
+
+        //var 先使用后声明   不合理
         // age = 19
         // var age
         // console.log(age)
+
+        //let不能 先使用后声明 。否则会报错     
         // age = 19
         // let age
         // console.log(age)
-        var age = 18
-        var age = 19
+
+
+
+        // var age = 18
+        // var age = 19
         console.log(age)
     </script>
+    <p>
+        在 JavaScript 中var和let是用于声明变量的关键字,它们之间存在以下几个主要区别:
+        1.作用域(Scope):
+            ·var 声明的变量具有函数作用域(function scope),表示在整个函数内部(包括嵌套的子函数)都可以访问 到这个变量。
+            ·let 声明的变量具有块级作用域(block scope),只在声明它的代码块中可访问。它避免了一些潜在的错误, 例如循环中的计数器或临时变量在外部被误使用。
+        2.变量提升(Hoisting):
+            ·使用 var声明的变量会被提升(hoisted)到其作用域的顶部,在变量声明之前的代码依然可以访问它。然 而,如果在声明之前访问var 变量,它 的值会是 undefined。
+            ·使用let 声明的变量不会变量提升。如 果在声明之前试图访问这个变量,程序 会抛出一个引用错误 (ReferenceError)。
+        3.初始化(Initialization):
+            ·var 变量在声明时默认会被赋值为 undefined。
+            ·let 关键字声明的变量在声明之前不会 被初始化。如果你尝试访问未初始化的 1et 变量,程序会抛出引用错误 (ReferenceError)。
+        4.重复声明(Redeclaration):
+            ·使用 var关键字声明同名变量时,不会 抛出错误:后来的声明将覆盖之前的声 明。
+            ·使用let 关键字重复声明相同名称的变 量会导致程序抛出语法错误 (SyntaxError)。
+        鉴于这些区别,现代 JavaScript 开发中建议使用 let 和const(用于常量声明)代替 var来保 护您的代码出现意外现象。let 和 const 可以 提供更可预测的变量行为,帮助减少可能的错误和意外全局变量污染。       
+    </p>
 </body>
 
 </html>

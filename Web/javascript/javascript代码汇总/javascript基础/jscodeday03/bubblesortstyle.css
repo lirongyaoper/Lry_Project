@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .bar {
+    width: 20px;
+    margin-right: 5px;
+    background-color: dodgerblue;
+  }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>变量作用域 lry</title>
 </head>
 
 <body>
@@ -20,6 +20,8 @@
         // if (true) {
         //     console.log(num)
         // }
+
+
         // 2. 在局部作用域下，变量是 局部变量
         // 函数内的变量，只能给内部使用，函数外面不能使用
         // function fn() {
@@ -31,16 +33,19 @@
         //         let num2 = 20
         //     }
         //     fn1()
-        //     // console.log(num2)  num2 is not defined
+        //     console.log(num2)  //num2 is not defined
         // }
         // fn()
-        // console.log(num)  num is not defined
+        // console.log(num)  //num is not defined
 
+
+
+        
         // 3. 块级变量  
         // if (true) {
         //     let num = 10
         // }
-        // // console.log(num)
+        // console.log(num)
         // for (let i = 0; i < 5; i++) {
         //     console.log(i)
         // }
@@ -51,10 +56,10 @@
         //     num = 10
         // }
         // fn()
-        // if (true) {
-        //     num = 10
-        // }
-        // console.log(num)
+        if (true) {
+            num = 10
+        }
+        console.log(num)
         // function fn(x, y) {
         //     // x 和 y 可以看做是 局部变量
         //     document.write(x + y)
@@ -62,17 +67,17 @@
         // fn(1, 2)
         // console.log(x) 错误了
 
-        let num = 10
+        // let num = 10
 
-        function fn() {
-            let i = 0
-            console.log(i);
-        }
-        fn()
+        // function fn() {
+        //     let i = 0
+        //     console.log(i);
+        // }
+        // fn()
 
-        if (true) {
-            let j = 0
-        }
+        // if (true) {
+        //     let j = 0
+        // }
     </script>
 
 </body>
