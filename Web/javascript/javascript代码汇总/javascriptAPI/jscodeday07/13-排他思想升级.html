@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>互斥思想升级 lry</title>
     <style>
         .pink {
             background: pink;
@@ -25,9 +25,11 @@
                 //     btns[j].classList.remove('pink')
                 // }
                 // 我只需要找出那个唯一的 pink类，删除
-                document.querySelector('.pink').classList.remove('pink')
-                // 我的
-                this.classList.add('pink')
+                    // document.querySelector('.pink').classList.remove('pink')
+                    // document.querySelector('.pink').classList.remove('pink')
+                    document.querySelector('.pink').classList.remove('pink')
+                // 为我自己添加样式
+                    this.classList.add('pink')
             })
         }
     </script>

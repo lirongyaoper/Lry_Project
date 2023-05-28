@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>用户注册倒计时 lry</title>
 </head>
 
 <body>
@@ -14,26 +14,41 @@
         【请您注意】如果您不同意以下协议全部或任何条款约定，请您停止注册。您停止注册后将仅可以浏览我们的商品信息但无法享受我们的产品或服务。如您按照注册流程提示填写信息，阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容，并表明您同意我们可以依据协议内容来处理您的个人信息，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方（详情查看
     </textarea>
     <br>
-    <button class="btn" disabled>我已经阅读用户协议(6)</button>
+    <button class="btn" disabled>我已经阅读用户协议(8)</button>
     <script>
         // 1. 获取元素 button 
         let btn = document.querySelector('.btn')
         // 2. 计算逻辑
         // 2.1 我们需要一个变量 用来计数  
-        let i = 6
+        let i = 8
         // 2.2 开启定时器 间歇函数  timer 定时器的序号id
-        let timer = setInterval(function () {
+
+        // let timer = setInterval(function () {
+        //     i--
+        //     btn.innerHTML = `我已经阅读用户协议(${i})`
+        //     if (i === 0) {
+        //         // 不走了，清除定时器 
+        //         clearInterval(timer)
+        //         // 开启按钮
+        //         btn.disabled = false
+        //         // 更换文字
+        //         btn.innerHTML = '我同意该协议啦'
+        //     }
+        // }, 1000);
+
+        let timer1 = setInterval(() =>{
             i--
             btn.innerHTML = `我已经阅读用户协议(${i})`
-            if (i === 0) {
-                // 不走了，清除定时器 
-                clearInterval(timer)
-                // 开启按钮
+            if(i ===0){
+                //清除定时器
+                clearInterval(timer1);
+                //开启点击按钮
                 btn.disabled = false
-                // 更换文字
-                btn.innerHTML = '我同意该协议啦'
+                // 更换按钮文字内容
+                btn.innerHTML='我也知晓协议内容，同意进行注册！'
+                
             }
-        }, 1000)
+        }, 1000);
     </script>
 </body>
 

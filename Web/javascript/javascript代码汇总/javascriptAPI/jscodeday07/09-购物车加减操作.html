@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>购物车加减操作 lry</title>
   <style>
     div {
       width: 80px;
@@ -46,16 +46,17 @@
       let reduce = document.querySelector('#reduce')
       // 2. 点击加号 事件侦听  
       add.addEventListener('click', function () {
-        // console.log(typeof total.value)
+        //console.log(typeof total.value)    string  
         // total.value = total.value + 1
         // i++   隐式转换
         // i = i + 1 
         total.value++
+   
         reduce.disabled = false
       })
       // 3. 点击减号 事件侦听  
       reduce.addEventListener('click', function () {
-
+        console.log(typeof total.value)
         total.value--
         if (total.value <= 1) {
           reduce.disabled = true
