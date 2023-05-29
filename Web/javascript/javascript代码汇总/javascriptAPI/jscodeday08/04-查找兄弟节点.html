@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>查找兄弟结点 lry</title>
 </head>
 
 <body>
@@ -21,9 +21,11 @@
         let two = document.querySelector('.two')
         btn.addEventListener('click', function () {
             // two.style.color = 'red'
-            two.nextElementSibling.style.color = 'red'
             two.previousElementSibling.style.color = 'red'
+            two.nextElementSibling.style.color = 'blue'
         })
+        console.log(two.nextSibling)
+        console.log(two.previousSibling)
     </script>
 </body>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nexSibling与nextElementSibling的区别与联系  lry</title>
+
+</head>
+<body>
+
+    
+<!-- 
+    `nextSibling 和 `nextElementSibling` 这两个只读属性都用于在 DOM 中查找指定元素节点的下一个同级节点（兄弟节点）。它们的主要区别在于返回节点的类型：
+
+    1. `nextSibling`：返回当前元素的下一个同级节点，可以是元素节点、文本节点，还可以是注释节点等。因此，返回的节点类型可能包括：`Element`（元素节点）、`Text`（文本节点）和 `Comment`（注释节点）等。如果没有下一个同级节点，那么 `nextSibling` 会返回 `null`。
+    
+    2. `nextElementSibling`：返回当前元素的下一个元素节点（同级节点）。与 `nextSibling` 不同，`nextElementSibling` 仅返回类型为 `Element` 的节点，忽略其他类型的节点（如文本节点和注释节点）。当不存在下一个元素节点时，`nextElementSibling` 会返回 `null`。
+    
+    在某些情况下，如果需要处理的是非元素类型的节点（如纯文本节点），请使用 `nextSibling`；而大部分情况下，开发者通常更关心元素节点，使用 `nextElementSibling` 会更简单、方便。使用 `nextSibling` 可能需要区分和处理返回的非元素类型节点，从而增加编码复杂度和可能出错的风险。 -->
+    
+
+    
+ 
+    
+
+    <ul>
+    <li id="item1">Item 1</li> <!-- 这是一个注释节点 -->
+    <li id="item2">Item 2</li>
+    <li id="item3">Item 3</li>
+    </ul>
+
+
+    <script>
+        const item1 = document.getElementById('item1');
+        
+        // 使用 nextSibling 查找 item1 的下一个兄弟节点
+        const nextSiblingNode_lry = item1.nextSibling;
+        console.log(nextSiblingNode_lry); // 输出 注释节点
+        
+        // 使用 nextElementSibling 查找 item1 的下一个元素节点
+        const nextElementNode_lry = item1.nextElementSibling;
+        console.log(nextElementNode_lry); // 输出 Item 2 的元素节点（id=item2）        
+    </script>       
+    <!-- 这个示例中，`nextSibling` 返回了一个注释节点，而 `nextElementSibling` 返回了下一个元素节点（id=item2 的节点）。这说明 `nextElementSibling` 属性在查找元素节点时更具有针对性，而使用 `nextSibling` 需要对返回的节点类型进行判断和处理。    -->      
+</body>
+</html>

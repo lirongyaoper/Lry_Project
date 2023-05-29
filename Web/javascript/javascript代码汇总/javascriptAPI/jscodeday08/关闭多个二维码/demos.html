@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>关闭多个二维码 lry</title>
   <style>
     .erweima {
       width: 149px;
@@ -53,6 +53,7 @@
       close_btn[i].addEventListener('click', function () {
         // 3. 关闭当前的那个二维码  点击谁，就关闭谁的爸爸
         this.parentNode.style.visibility = 'hidden'
+        this.parentNode.style.display = 'none'
       })
     }
   </script>

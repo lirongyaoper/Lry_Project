@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <ul>
+    <!-- <ul>
         <li>我是大毛</li>
         <li>我是二毛</li>
     </ul>
@@ -26,7 +26,22 @@
         // ul.appendChild(li)
         // 3. 追加节点  父元素.insertBefore(子元素， 放到那个元素的前面)   
         ul.insertBefore(li, ul.children[0])
+    </script> -->
+
+    <ul>
+        <li>河南省周口市</li>
+        <li>河北省石家庄</li>
+        <li>黑龙江省齐齐哈</li>
+    </ul>
+    <script>
+        let ol_lry = document.querySelector('ul')
+        let li_lry = document.createElement('li')
+        li_lry.innerHTML = '北京市 洪山区'
+        ol_lry.insertBefore(li_lry, ol_lry.children[0])
+
     </script>
+
+
 </body>
 
 </html>
