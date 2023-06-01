@@ -29,10 +29,10 @@
             // console.log(11)
             // pageX 和 pageY 跟文档坐标有关系
             // console.log(e)
-            console.log('clientX:' + e.clientX, 'clientY:' + e.clientY)
-            console.log('pageX:' + e.pageX, 'pageY:' + e.pageY)
-            console.log('offsetX:' + e.offsetX, 'offsetY:' + e.offsetY)
-            console.log('screenX:' + e.screenX, 'screenY:' + e.screenY)
+            console.log('clientX:' + e.clientX, 'clientY:' + e.clientY)//e.clientX 是一个只读属性，表示鼠标指针相对于浏览器视窗（viewport）左边的水平坐标。它以像素为单位，与页面滚动距离无关。
+            console.log('pageX:' + e.pageX, 'pageY:' + e.pageY)//e.pageX 是一个只读属性，表示鼠标指针在整个 HTML 文档中的水平坐标。该坐标是相对于整个文档左边的距离（包括滚动条的距离）。它以像素为单位，并考虑了滚动的偏移量。
+            console.log('offsetX:' + e.offsetX, 'offsetY:' + e.offsetY)//e.offsetX 是一个只读属性，表示鼠标指针相对于目标元素（事件触发的元素）左边的水平坐标。它以像素为单位，只与元素本身有关，与文档中的其他部分无关。
+            console.log('screenX:' + e.screenX, 'screenY:' + e.screenY)//e.screenX 是一个只读属性，表示鼠标指针相对于屏幕左边的水平坐标。它以像素为单位，与屏幕的分辨率有关。
         })
 
 
