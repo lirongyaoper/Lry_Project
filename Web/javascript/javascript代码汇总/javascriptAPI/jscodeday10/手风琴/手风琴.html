@@ -3,7 +3,7 @@
 
 <head lang="en">
   <meta charset="UTF-8">
-  <title>手风琴</title>
+  <title>手风琴 lry</title>
   <style>
     ul {
       list-style: none;
@@ -73,19 +73,33 @@
   // (1) 获取元素
   let lis = document.querySelectorAll('li')
   // (2) 绑定鼠标经过和离开事件
-  for (let i = 0; i < lis.length; i++) {
-    // (3) 鼠标经过
-    lis[i].addEventListener('mouseenter', function () {
-      // 排他思想  干掉所有人 100px，复活我自己 800px
-      for (let j = 0; j < lis.length; j++) {
-        lis[j].style.width = '100px'
+  // for (let i = 0; i < lis.length; i++) {
+  //   // (3) 鼠标经过
+  //   lis[i].addEventListener('mouseenter', function () {
+  //     // 排他思想  干掉所有人 100px，复活我自己 800px
+  //     for (let j = 0; j < lis.length; j++) {
+  //       lis[j].style.width = '100px'
+  //     }
+  //     this.style.width = '800px'
+  //   })
+  //   // (4) 鼠标离开
+  //   lis[i].addEventListener('mouseleave', function () {
+  //     for (let j = 0; j < lis.length; j++) {
+  //       lis[j].style.width = '240px'
+  //     }
+  //   })
+  // }
+
+  for(let m=0; m < lis.length; m++){
+    lis[m].addEventListener('mouseenter',function(){
+      for(let n = 0; n < lis.length; n++){
+        lis[n].style.width = '100px'
       }
       this.style.width = '800px'
     })
-    // (4) 鼠标离开
-    lis[i].addEventListener('mouseleave', function () {
-      for (let j = 0; j < lis.length; j++) {
-        lis[j].style.width = '240px'
+    lis[m].addEventListener('mouseleave',function(){
+      for(let n= 0; n < lis.length; n++){
+        lis[n].style.width = '240px'
       }
     })
   }
