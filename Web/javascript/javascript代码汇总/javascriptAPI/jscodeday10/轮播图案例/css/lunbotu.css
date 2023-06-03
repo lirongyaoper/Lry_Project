@@ -10,7 +10,7 @@
 
   .main {
     width: 700px;
-    margin: auto;
+    margin: 100px auto;
     background: #000;
   }
 
@@ -64,7 +64,7 @@
     float: left;
     margin-top: 12px;
     margin-right: 3px;
-    background-image: url(./assets/icon_focus_switch.png);
+    background-image: url(../assets/icon_focus_switch.png);
   }
 
   .slides .extra .prev {
