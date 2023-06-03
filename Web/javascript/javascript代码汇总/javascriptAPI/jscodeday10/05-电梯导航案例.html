@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>电梯导航案例 lry</title>
     <style>
         * {
             margin: 0;
@@ -85,19 +85,35 @@
 
         // 1. 获元取素  
         let items = document.querySelectorAll('.item')
-        // 内容的盒子获取
+        // 内 容的盒子获取
         let neirongs = document.querySelectorAll('.neirong')
         // 2. 左侧aside 模块 点击谁，谁高亮
-        for (let i = 0; i < items.length; i++) {
-            items[i].addEventListener('click', function () {
-                // 找到上一个active 移除类
-                document.querySelector('.aside .active').classList.remove('active')
-                // 点击谁谁添加类
+        // for (let i = 0; i < items.length; i++) {
+        //     items[i].addEventListener('click', function () {
+        //         // 找到上一个active 移除类
+        //         document.querySelector('.aside .active').classList.remove('active')
+        //         // 点击谁谁添加类
+        //         this.classList.add('active')
+        //         // 3. 右侧内容跟随走动  让页面滚动到对应的offsetTop值位置
+        //         // console.log(neirongs[i].offsetTop) 不用给单位
+        //         document.documentElement.scrollTop = neirongs[i].offsetTop
+        //     })
+        // }
+
+        for(let i = 0 ;i < items.length; i++){
+            //为每一个item绑定点击事件
+            items[i].addEventListener('click',function(){
+                // 循环干掉所有人的active类
+                for(let j=0; j< items.length;j++){
+                    items[j].classList.remove('active')
+                }
+                // 为自己添加active类
+                // items[i].classList.add('active')
                 this.classList.add('active')
-                // 3. 右侧内容跟随走动  让页面滚动到对应的offsetTop值位置
-                // console.log(neirongs[i].offsetTop) 不用给单位
+                
                 document.documentElement.scrollTop = neirongs[i].offsetTop
-            })
+            });
+
         }
 
     </script>

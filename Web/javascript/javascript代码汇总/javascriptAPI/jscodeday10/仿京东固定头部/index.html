@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>仿京东固定顶部 lry</title>
     <style>
         * {
             margin: 0;
@@ -77,6 +77,7 @@
     <script>
         let sk = document.querySelector('.sk')
         let header = document.querySelector('.header')
+        let backtop = document.querySelector('.backtop')
         // 1. 页面滚动事件
         window.addEventListener('scroll', function () {
             // console.log(11)
@@ -87,9 +88,15 @@
             if (document.documentElement.scrollTop >= sk.offsetTop) {
                 // alert('改吃饭了')
                 header.style.top = '0'
+                backtop.style.display = 'block'
+
             } else {
                 header.style.top = '-80px'
+                backtop.style.display = 'none'                
             }
+            backtop.addEventListener('click',function(){
+                document.documentElement.scrollTop = 0
+            })
         })
 
     </script>
