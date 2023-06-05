@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>作用域练习 lry</title>
 </head>
 <body>
 	
@@ -12,7 +12,7 @@
 
 		// let num = 1;
 		// function f1 () {
-		// 	let num = 2;
+		// 	let  num = 2;
 		// 	function f2 () {
 		// 		num = 3;
 		// 	}
@@ -21,25 +21,24 @@
 		// }
 		// f1();
 
-		// console.log(num);
-		
+		// console.log(num);  //1
+		console.log('---------------------1----------------------------')		
+
+
 
 
 		// let n = 123;
-
 		// function f1 () {
-
 		// 	n = 456;
-
 		// 	function f2 () {
 		// 		let n = 789
 		// 	}
 		// 	f2();
-
 		// }
 		// f1();
-
-		// console.log(n);
+		// console.log(n);//456
+		console.log('---------------------2----------------------------')	
+		
 		
 
 		let k = 1;
@@ -53,7 +52,8 @@
 
 			f2();
 		}
-		f1();
+		f1();//9
+		console.log('---------------------3----------------------------')			
 	</script>
 
 

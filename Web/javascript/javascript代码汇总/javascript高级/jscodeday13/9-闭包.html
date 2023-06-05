@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>闭包1</title>
 </head>
 <body>
 	
@@ -17,31 +17,31 @@
 			// 	console.log(n);
 			// }
 			// fn();
-			// console.log(n);
+			// console.log(n);//Uncaught ReferenceError: n is not defined
 
-
+			console.log('---------------------1----------------------------')		
 		// 闭包：一个作用域有权访问另外一个作用域的局部变量
 		// 作用：延申变量的使用范围
 
-		// function fn () {
+		function fn () {
 
-		// 	let num = 123;
+			let num = 123;
 
-		// 	// 作用域链：
-		// 	return function fun () {
-		// 		console.log(num);
-		// 	}
-		// 	// fun();
-		// }
+			// 作用域链：
+			return function fun () {
+				console.log(num);
+			}
+			// fun();
+		}
 
-		// let re = fn();
+		let re = fn();
 
-		// // console.log(re);
+		// console.log(re);
 		
-		// re();
-		// re();
-		// re();
-
+		re();
+		re();
+		re();
+		console.log('---------------------2----------------------------')	
 
 		function father () {
 			let num = 66;
@@ -55,9 +55,9 @@
 
 		// console.log( o );
 		
-		o();
+		o();//66
 
-
+		console.log('---------------------3----------------------------')	
 	</script>
 
 
