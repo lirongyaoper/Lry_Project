@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>构造函数lry</title>
 </head>
 <body>
 
@@ -14,36 +14,35 @@
 		
 		// 内置构造函数：Object，创建对象
 		
-		// let obj = new Object();
+		let obj = new Object();
 
-		// // console.log( obj );
-		// // 添加东西
-		// obj.uname = '阿飞';
-		// obj.age = 22;
+		// 添加东西
+		obj.uname = '阿飞';
+		obj.age = 22;
 
+		obj.fei = function () {
+			console.log('飞起来');
+		};
 
-		// obj.fei = function () {
-		// 	console.log('方法');
-		// };
+		obj.chi = function () {
+			console.log('吃');
+		}
+		console.log( obj );
+		console.log(obj.uname)
+		console.log(obj.age)
+		console.log('------------------------------1----------------------------------')
 
-		// obj.chi = function () {
-		// 	console.log('吃');
-		// }
+		let obj1 = new Object( {uname : '张三丰', age : 22, sex : '男'} );
 
-		// console.log( obj );
-
-
-		// let obj = new Object( {uname : '张三丰', age : 22, sex : '男'} );
-
-		// console.log( obj );
+		console.log( obj1 );
 
 
 		// 注意：如果构造函数不需要参数，那么可以省略小括号
-		let obj = new Object;
+		// let obj = new Object;
 
-		obj.uname = '张飞';
+		// obj.uname = '张飞';
 
-		console.log(obj);
+		// console.log(obj);
 
 	</script>
 	
