@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>13-静态成员和实例成员 lry</title>
 </head>
 <body>
 
@@ -29,16 +29,55 @@
 			console.log(123);
 		}
 
-		console.log(Star.uname);
-
-
+		console.log(Star.uname);// 实例成员只能由实例对象访问 undefined
+		console.log(obj.uname)// 实例成员只能由实例对象访问 刘德华
+		console.log('-----------------------------------------')
+		console.log(obj.language)// 静态成员只能由构造函数访问  undefined
+		console.log(Star.language)// 静态成员只能由构造函数访问  汉语
 
 		// 我们把在构造函数身上直接添加的成员，称为静态成员（静态属性静态方法）
 			// 静态成员只能由构造函数访问
 		// 构造函数内部为实例对象准备的成员，称为实例成员（实例属性和实例方法）
-			// 只能由实例对象访问
+			// 实例成员只能由实例对象访问
+		console.log('------------------------李荣耀--------------------------')
 
 
+
+
+		// 构造函数
+		function MyClass() {
+			// 实例属性
+			this.instanceProperty = "instance property";
+
+			// 实例方法
+			this.instanceMethod = function() {
+				console.log("This is an instance method");
+			};
+		}
+
+		// 静态属性
+		MyClass.staticProperty = "static property";
+
+		// 静态方法
+		MyClass.staticMethod = function() {
+			console.log("This is a static method");
+		};
+
+		// 创建实例
+		const obj1 = new MyClass();
+		const obj2 = new MyClass();
+
+		// 访问实例成员
+		console.log(obj1.instanceProperty); // 输出 "instance property"
+		obj1.instanceMethod(); // 输出 "This is an instance method"
+
+		// 访问静态成员
+		console.log(MyClass.staticProperty); // 输出 "static property"
+		MyClass.staticMethod(); // 输出 "This is a static method"
+
+		// 注意：不能通过实例直接访问静态成员
+		console.log(obj1.staticProperty); // 输出 undefined
+		obj1.staticMethod(); // 报错：TypeError: obj1.staticMethod is not a function
 
 
 
