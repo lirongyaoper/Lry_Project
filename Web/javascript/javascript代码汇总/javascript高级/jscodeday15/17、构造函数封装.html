@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>17-构造函数封装  lry</title>
 </head>
 <body>
 	
@@ -48,6 +48,8 @@
 			this.eat = function () {}
 		}
 
+		console.log(Chinese.prototype)
+
 
 		function Japanese () {
 			this.head = 1;
@@ -61,7 +63,7 @@
 			this.say = function () {}
 			this.eat = function () {}
 		}
-
+		console.log(Japanese.prototype)
 		function English () {
 			this.head = 1;
 			this.eyes = 2;
@@ -74,7 +76,7 @@
 			this.say = function () {}
 			this.eat = function () {}
 		}
-
+		console.log(English.prototype)
 	</script>
 
 

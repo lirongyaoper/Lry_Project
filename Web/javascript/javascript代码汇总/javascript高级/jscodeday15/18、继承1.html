@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>继承01  lry</title>
 </head>
 <body>
 	
@@ -24,22 +24,20 @@
 			this.skin = 'yellow';
 			this.language = '汉语';
 		}
-
-
 		// 原型
 		// console.log( Chinese.prototype );
-		Chinese.prototype = obj;
+		// Chinese.prototype = obj;
 
-		Chinese.prototype.constructor = Chinese;
+		// Chinese.prototype.constructor = Chinese;
 
-		console.log( Chinese.prototype );
+		// console.log( Chinese.prototype );
 
-		// 实例化
-		let c1 = new Chinese();
+		// // 实例化
+		// let c1 = new Chinese();
 		// console.log(c1);
 		// c1.eat();
 
-
+		console.log('-------------------------------------')
 		function Japanese () {
 			this.skin = 'yellow';
 			this.language = '日语';
@@ -55,8 +53,8 @@
 		// 实例化
 		let j1 = new Japanese();
 
-		// console.log(j1.head);
-		// j1.eat();
+		console.log(j1.head);
+		j1.eat();
 
 	</script>
 
