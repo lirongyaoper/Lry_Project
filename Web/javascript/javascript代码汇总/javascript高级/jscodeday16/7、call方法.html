@@ -2,25 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>call 方法 lry</title>
 </head>
 <body>
 
 
 	<script type="text/javascript">
-			
 
-		// function fun (a, b) {
-		// 	console.log(this, a, b)
-		// }
-
-		// let obj = {uname : '张三丰', age : 22};
 
 		// // call：
 		// // 函数.call(this，arg1, arg2,......)
 		// // 函数调用call、call会调用函数执行，在执行的过程中，改变this的指向
-		// fun.call(obj, 1, 2);
-
+			function fun(a,b){
+				console.log(this ,a ,b )
+			}
+			let obj_lry = {uname:'张三飞',age : 22}
+			fun.call(obj_lry,77,42)
+			console.log('------------------------------')
 		// 属性：对象.属性
 		// 方法：对象.方法()
 

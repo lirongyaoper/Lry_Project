@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title> 继承02 lry</title>
+	<title> 继承02 完整版 lry</title>
 </head>
 <body>
 	
@@ -43,8 +43,6 @@
 		Chinese.prototype = new Person();
 		// 2、指回构造函数本身
 		Chinese.prototype.constructor = Chinese;
-
-		console.log(Chinese.prototype);
 
 		// 实例对象
 		let c1 = new Chinese();
